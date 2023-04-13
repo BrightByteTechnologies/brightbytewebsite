@@ -12,7 +12,7 @@ $bb_logo_path = getRelativePath($currentFile, $bb_logo_file);
 $flag_germany_path = getRelativePath($currentFile, $flag_germany_file);
 
 
-$homepage_file = "homepage.php";
+$homepage_file = "index.php";
 $homepage_path = getRelativePath($currentFile, $homepage_file);
 
 $product_file = "product.php";
