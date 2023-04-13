@@ -1,0 +1,55 @@
+/* Custom CSS */
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+
+.dropdown-toggle {
+    margin-right: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+}
+
+.bi-sun {
+    color: white;
+}
+
+.main {
+    background-color: var(--logocolor);
+    text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.3em var(--logocolor-light);
+    padding-bottom: 5%;
+    color: white;
+}
+
+.img-thumbnail {
+    border: none;
+    border-radius: 100%;
+}
+
+.card p {
+    color: var(--logocolor-light);
+}
+
+#bot-text {}
+
+#friends {
+    padding-top: 5%;
+}
+
+body {
+    background-color: var(--logocolor);
+    text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.3em var(--logocolor-light);
+}

@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#company-logo {
+    background-color: var(--logocolor);
+    height: 80px;
+    width: auto;
+    position: relative;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#company-name {
+    font-size: 30px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.2em var(--logocolor-light);
+    color: #fff;
+    width: 300px;
+    top: -10px;
+    position: relative;
+}
+
+#brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    height: 100px;
+    background-color: var(--logocolor);
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-up {
+    display: block;
+    text-align: center;
+    align-items: center;
+    height: 50%;
+}
+
+#nav-up ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav-up span {
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav-up ul li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#nav-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 5%;
+    height: 50%;
+}
+
+#nav-down li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+#nav-down li:last-child {
+    margin-right: 0;
+}
+
+#nav-down a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+#nav-down a:hover {
+    background-color: var(--logocolor-dark);
+    border-radius: var(--border-radius);
+}
+
+#dropdown {
+    position: relative;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 1;
+    background-color: var(--logocolor-dark);
+    padding: 0.1rem 0.1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+    width: min-content;
+    text-align: center;
+}
+
+#dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+#dropdown:hover #dropbtn {
+    background-color: var(--logocolor-dark);
+    border-radius: var(--border-radius) var(--border-radius) var(--border-radius) 0 !important;
+}
+
+#dropdown-content a:hover {
+    background-color: var(--logocolor-light);
+    color: #121212;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#dropbtn {
+    cursor: pointer;
+}
+
+#language-flag-container {
+    position: absolute;
+    left: 90%;
+}
+
+#flag {
+    position: fixed;
+    float: right;
+    width: auto;
+    height: 30px;
+    left: 96%;
+    top: 2%;
+    border-radius: 15%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+#sidenav-container {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    * {
+        user-select: none;
+    }
+
+    #navbar {
+        overflow-y: hidden;
+        height: 100px;
+        width: 100%;
+        background-color: var(--logocolor);
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+    }
+
+    #nav-up {
+        display: block;
+        height: 100%;
+        text-align: center;
+    }
+
+    #company-logo {
+        background-color: var(--logocolor);
+        height: 60px;
+        width: auto;
+        position: relative;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    #company-name {
+        font-size: 125%;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none;
+        text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.2em var(--logocolor-light);
+        color: #fff;
+        width: 200px;
+        top: 50%;
+        position: relative;
+    }
+
+    #nav-down {
+        display: none;
+    }
+
+    #flag {
+        position: relative;
+        float: right;
+        width: 100%;
+        height: 100%;
+        left: -10px;
+        top: -25px;
+        border-radius: 15%;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        border: 1px solid #fff;
+    }
+
+    #sidenav-container {
+        width: 10%;
+        height: 10px;
+        display: block;
+        transition: all 0.5s;
+    }
+
+    #sidenav-container span {
+        font-size: larger;
+        margin-left: 10%;
+        background-color: var(--logocolor-light);
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    #sidenav-container li {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 10%;
+        list-style-type: none;
+        text-align: left;
+        border-bottom: 1px var(--logocolor-dark) dashed;
+    }
+
+    #sidenav {
+        display: none;
+        margin: auto;
+        height: auto;
+        width: 0;
+        background-color: var(--logocolor-light);
+    }
+
+    #sidenav a,
+    #sidenav:visited a {
+        text-decoration: none;
+        width: auto;
+        height: auto;
+        color: white;
+        text-align: left;
+    }
+
+    #openbtn {
+        display: block;
+        text-align: center;
+        font-size: 100px;
+    }
+
+    #closebtn {
+        display: block;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #dropdown-content {
+        display: block;
+        position: relative;
+        margin-left: 50%;
+        width: auto;
+        height: auto;
+        background-color: var(--logocolor-light);
+    }
+}

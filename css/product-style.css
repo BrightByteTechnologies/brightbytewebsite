@@ -1,0 +1,433 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #1e7898;
+    letter-spacing: 1px;
+    font-style: oblique;
+}
+
+h2 {
+    color: aliceblue;
+    font-style: oblique;
+}
+
+p {
+    color: #234c5c;
+    clear: both;
+}
+
+button {
+    background-color: #1e7898;
+    border: none;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(102, 134, 147);
+    color: rgb(77, 77, 77);
+}
+
+/*basic information part*/
+.bb-sell {
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--logocolor) 0%, rgba(255, 255, 255) 75%);
+}
+
+.bevbotleft {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 5%;
+    padding: auto;
+}
+
+.bevbotright {
+    margin-left: 5%;
+    margin-right: 15%;
+    margin-top: 8%;
+    padding: auto;
+}
+
+.bb-why {
+    background-color: #ffffff;
+    margin-top: 10%;
+}
+
+.bb-des {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #234c5c 1px dashed;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.bb-des:last-child {
+    border-bottom: none;
+}
+
+.lb {
+    width: 100%;
+    height: 100%;
+}
+
+#name {
+    font-size: 64px;
+}
+
+#p1 {
+    font-size: 40px;
+    font-style: oblique;
+}
+
+#p1::first-letter {
+    font-size: 50px;
+}
+
+
+#bbpic {
+    width: max-content;
+    height: max-content;
+    margin-left: 1%;
+    padding: auto;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .6
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*Top Button*/
+#topBtn {
+    display: none;
+    position: fixed;
+    /* Place the button at the bottom of the page */
+    bottom: 20px;
+    /* Place the button 30px from the right */
+    right: 5%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #1e7898;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 40%;
+    font-size: 18px;
+}
+
+#topBtn:hover {
+    background-color: #16566d;
+}
+
+/*timeline*/
+.tl-p {
+    color: aliceblue;
+}
+
+.timeline-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    background: linear-gradient(180deg, rgba(255, 255, 255)0%, rgba(102, 134, 147) 50%);
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 500px;
+}
+
+/*hovering div makes background blur*/
+.timeline:hover .tl-bg {
+    filter: grayscale(100%) blur(3px) brightness(40%);
+}
+
+/*hovering div makes text pop put*/
+.timeline:hover .tl-text {
+    opacity: 1;
+}
+
+/*hovering div move whole contect*/
+.timeline:hover .tl-content {
+    top: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.tl-bg {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    background-color: #234c5c;
+    position: absolute;
+    transition: all .4s;
+    z-index: 0;
+    filter: grayscale(0%);
+}
+
+.tl-img-panel {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin: 10% auto 0;
+    position: relative;
+}
+
+.tl-img {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+.tl-content {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    transition: all .4s;
+    text-align: center;
+}
+
+.tl-text {
+    opacity: 0;
+    position: relative;
+    transition: all .4s;
+}
+
+.time-forward,
+.time-backward {
+    cursor: pointer;
+    position: sticky;
+    width: auto;
+    height: 500%;
+    margin: 0;
+    margin-top: 5%;
+    padding: 1%;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.time-forward {
+    border-radius: 3px 0 0 3px;
+}
+
+.time-forward:hover,
+.time-backward:hover {
+    background-color: #234c5c;
+}
+
+.left {
+    animation-name: left;
+    animation-duration: 1.5s;
+}
+
+.right {
+    animation-name: right;
+    animation-duration: 1.5s;
+}
+
+@keyframes left {
+    0% {
+        left: 0px;
+        opacity: 0.4;
+        filter: blur(1px);
+    }
+
+    50% {
+        left: 10px;
+        opacity: 0.7;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes right {
+    0% {
+        right: 0px;
+        opacity: 0.4;
+        filter: blur(1px);
+    }
+
+    50% {
+        right: 10px;
+        opacity: 0.7;
+    }
+
+    100% {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .bb-sell,
+    .timeline-container,
+    .bb-why {
+        overflow-x: hidden;
+    }
+
+    .bb-sell {
+        padding-top: 0px;
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bevbotleft {
+        display: flex;
+        padding: 0;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bevbotright {
+        position: relative;
+        padding: 0;
+        margin: auto;
+        width: 60%;
+    }
+
+    #bbpic {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .bb-des {
+        display: block;
+    }
+
+    .bb-des:last-child br {
+        border: 1px #16566d solid;
+    }
+
+    .tl-bg {
+        filter: grayscale(100%) blur(2px) brightness(40%);
+    }
+
+    .timeline-box {
+        padding-bottom: 25%;
+    }
+
+    .tl-content {
+        top: 5%;
+    }
+
+    .tl-text {
+        opacity: 1;
+    }
+
+}
