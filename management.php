@@ -54,7 +54,7 @@ $currentFile = 'verwaltung.php';
                             <img alt="jonas" src="./pictures/teampics/Nik.PNG" />
                         </a>
                     </li>
-                    <---Dies kann so stehen bleiben:-->
+                    <--- Dies kann so stehen bleiben: --->
                     <li>
                         <a class="profile">
                             <h4 class="profile__name">Aaron Vössing</h4>
