@@ -35,38 +35,69 @@ $result->free_result();
 <html>
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @import url("css/root.css");
         @import url("css/oder-demo-style.css");
     </style>
+    <script src="./scripts/order-demo-script.js" defer></script>
 </head>
 
 <body>
     <?php include('includes/navbar/navbar.php') ?>
     <div class="order-nav">
-        <div class="info">
-            <p>Info</p> 
+        <div class="info scroll-left">
+            <p>Info: Es ist nur eine Demo</p>
         </div>
         <div class="order-basket">
-            <button>Basket</button>
+            <button id="basketBtn">
+                Basket
+                <span id="basketCount">0</span>
+            </button>
+            <div id="basket-overlay"></div>
+            <div id="basket">
+                <div id="basket-header">
+                    <button id="basket-close">&#10006;</button>
+                    <h2>Basket</h2>
+                </div>
+                <table id="basket-items">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Mange</th>
+                            <th>Entfernen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-in-basket">
+                    </tbody>
+                </table>
+                <div id="basket-footer">
+                    <button id="pay-button">Order</button>
+                    <button id="reset-button">Entfernen</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="menu-items">
-        <?php foreach ($itemInfo as $item) : ?>
-            <?php
+        <?php
+        $counter = 1;
+        foreach ($itemInfo as $item) :
             $name = $item['itemName'];
             $price = $item['itemPrice'];
-            ?>
-            <div class="item">
+            $itemId = "$counter";
+        ?>
+            <div class="item" id="<?= $itemId ?>" onclick="order(event)">
                 <div class="content-top">
                     <img src="pictures/placeholder.png" class="item-image">
                 </div>
                 <div class="content-bottom">
-                    <p class="item-name"><?= "$name <br> $price €" ?></p>
+                    <p class="item-info"><?= "<span class='item-name'>$name</span> <br> <b class='item-price'>$price</b> €" ?></p>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php
+            $counter++;
+        endforeach;
+        ?>
     </div>
 </body>
 

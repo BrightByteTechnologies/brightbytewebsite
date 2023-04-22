@@ -1,6 +1,6 @@
 <?php
 require_once("includes/functions/misc/getRelativPath.php");
-$currentFile = 'homepage.php';
+$currentFile = 'index.php';
 ?>
 <!DOCTYPE html>
 <html lang="de">

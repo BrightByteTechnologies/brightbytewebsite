@@ -5,21 +5,26 @@ body {
     min-block-size: 100%;
     min-inline-size: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--logocolor);
 }
 
 h1 {
-    color: #1e7898;
+    color: aliceblue;
+    text-shadow: 0 0 5px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
     letter-spacing: 1px;
     font-style: oblique;
 }
 
 h2 {
     color: aliceblue;
+    text-shadow: 0 0 4px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
     font-style: oblique;
 }
 
-p {
-    color: #234c5c;
+p,
+span {
+    color: aliceblue;
+    text-shadow: 0 0 5px var(--logocolor), 0 0 20px black;
     clear: both;
 }
 
@@ -27,7 +32,7 @@ button {
     background-color: #1e7898;
     border: none;
     color: whitesmoke;
-    padding: 15px 32px;
+    padding: 10% 15%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -45,35 +50,36 @@ button:hover {
     display: flex;
     width: auto;
     height: 100%;
-    padding-top: 5%;
+    padding-top: 10%;
+    padding-bottom: 5%;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, var(--logocolor) 0%, rgba(255, 255, 255) 75%);
 }
 
-.bevbotleft {
-    margin-top: 2%;
-    margin-left: 15%;
-    margin-right: 5%;
-    padding: auto;
+.bevbotleft,
+.bevbotright {
+    max-width: 100%;
+    padding-right: 5%;
 }
 
 .bevbotright {
-    margin-left: 5%;
-    margin-right: 15%;
-    margin-top: 8%;
-    padding: auto;
+    padding-right: 2%;
+}
+
+#bbpic {
+    max-width: 800px;
+    max-height: 800px;
+    border-radius: 15%;
 }
 
 .bb-why {
-    background-color: #ffffff;
-    margin-top: 10%;
+    margin-top: 8%;
+    background: linear-gradient(180deg, rgba(97, 130, 153, 1) 0%, var(--logocolor-light) 10%, var(--logocolor-light) 90%, rgba(97, 130, 153, 1) 100%);
 }
 
 .bb-des {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-bottom: #234c5c 1px dashed;
     margin-left: 15%;
     margin-right: 15%;
@@ -83,9 +89,23 @@ button:hover {
     border-bottom: none;
 }
 
+.des-detail {
+    display: block;
+    padding-bottom: 5%;
+}
+
+.des-name {
+    border-bottom: var(--logocolor) 1px dashed;
+}
+
 .lb {
     width: 100%;
     height: 100%;
+}
+
+#benefit {
+    max-width: 800px;
+    color: aliceblue;
 }
 
 #name {
@@ -115,7 +135,7 @@ button:hover {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
 }
@@ -208,6 +228,9 @@ button:hover {
 /*timeline*/
 .tl-p {
     color: aliceblue;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .timeline-box {
@@ -217,16 +240,16 @@ button:hover {
     width: 100%;
     height: 100%;
     padding-top: 5%;
-    padding-bottom: 7%;
-    background: linear-gradient(180deg, rgba(255, 255, 255)0%, rgba(102, 134, 147) 50%);
+    padding-bottom: 3%;
     overflow: hidden;
 }
 
 .timeline {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: 100%;
+    min-height: 500px;
     max-height: 500px;
 }
 
@@ -251,9 +274,9 @@ button:hover {
 
 .tl-bg {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: 100%;
-    min-height: 400px;
+    min-height: 500px;
     max-height: 500px;
     background-color: #234c5c;
     position: absolute;
@@ -266,13 +289,17 @@ button:hover {
     width: 100%;
     height: 100%;
     display: inline-block;
-    margin: 10% auto 0;
     position: relative;
 }
 
 .tl-img {
     width: auto;
     height: auto;
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    min-height: 200px;
+    max-height: 200px;
     position: relative;
     top: 0;
     left: 0;
@@ -281,12 +308,9 @@ button:hover {
 
 .tl-content {
     position: relative;
-    left: 0;
-    right: 0;
     top: 70px;
-    bottom: 0;
-    transition: all .4s;
     text-align: center;
+    transition: all .4s ease;
 }
 
 .tl-text {
@@ -414,6 +438,12 @@ button:hover {
         border: 1px #16566d solid;
     }
 
+    .tl-bg,
+    .timeline {
+        max-width: 300px;
+        max-height: 400px;
+    }
+
     .tl-bg {
         filter: grayscale(100%) blur(2px) brightness(40%);
     }
@@ -422,8 +452,8 @@ button:hover {
         padding-bottom: 25%;
     }
 
-    .tl-content {
-        top: 5%;
+    .tl-content, .tl-content:hover {
+        top: 0;
     }
 
     .tl-text {

@@ -11,13 +11,18 @@ body {
   overflow-x: hidden;
 }
 
+.d-block {
+  width: 80%;
+  height: auto;
+}
+
 
 h1 {
   position: absolute;
   color: #fff;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 80px;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: #fff;
