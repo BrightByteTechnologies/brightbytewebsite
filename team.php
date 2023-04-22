@@ -42,7 +42,7 @@ $currentFile = 'team.php';
 	
 
 <div class="content">
-<img src="./pictures/group.jpg" alt="group" >
+<img src="https://cdn.row-hosting.de/BBT/Teams/group.jpg" alt="group" >
 <h4>BrightByte Technologies Mitarbeiter</h4>
 <p></p>
 </div>
@@ -52,7 +52,7 @@ $currentFile = 'team.php';
 			<a href="<?php echo $management_path ?>">
 			<div class="context" >
 				
-				<img src="./pictures/verwaltungT.jpg" alt="" class="img-fluid mx-auto d-block">
+				<img src="https://cdn.row-hosting.de/BBT/Teams/Managment/management_group.jpg" alt="" class="img-fluid mx-auto d-block">
 				<div class="overlay green">
 					<div class="text text-white text-center">
 						<div>
@@ -68,7 +68,7 @@ $currentFile = 'team.php';
 			<a href="<?php echo $software_path ?>">
 
 			<div class="context darkblue">
-				<img src="./pictures/softwareT.jpg" alt="" class="img-fluid mx-auto d-block">
+				<img src="https://cdn.row-hosting.de/BBT/Teams/Software/software_group.jpg" alt="" class="img-fluid mx-auto d-block">
 				<div class="overlay darkblue  ">
 					<div class="text text-white text-center">
 						<div>
@@ -84,7 +84,7 @@ $currentFile = 'team.php';
 		<div class="col-md-4 col-sm-6">
 			<a href="<?php echo $hardware_path ?>">
 			<div class="context">
-				<img src="./pictures/hardwareT.jpg" alt="" class="img-fluid mx-auto d-block">
+				<img src="https://cdn.row-hosting.de/BBT/Teams/Hardware/hardware_group.jpg" alt="" class="img-fluid mx-auto d-block">
 				<div class="pink overlay">
 					<div class="text text-white text-center">
 						<div>
@@ -102,7 +102,7 @@ $currentFile = 'team.php';
   	<h2>Ehrenvoll Anerkennung</h2>
 	</div>
 	<div class="image">
-        <img src="./pictures/ole.jpg">
+        <img src="https://cdn.row-hosting.de/BBT/Teams/Ole.jpg">
       </div>
 	  <div class="col-sm-12">
       <div class="text2">
