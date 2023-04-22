@@ -2,8 +2,8 @@
 $navbar_script_file = 'includes\navbar\navbar-script.js';
 $navbar_style_file = 'includes\navbar\navbar-style.css';
 
-$bb_logo_file = 'pictures\bb-logo.png';
-$flag_germany_file = 'pictures\flags\flag-germany.png';
+$bb_logo_file = 'https://cdn.row-hosting.de/BBT/Website/bb-logo.png';
+$flag_germany_file = 'https://cdn.row-hosting.de/BBT/Website/Flags/flag-germany.png';
 
 $navbar_script_path = getRelativePath($currentFile, $navbar_script_file);
 $navbar_style_path = getRelativePath($currentFile, $navbar_style_file);
@@ -39,6 +39,7 @@ session_start();
   @import url("<?php echo $navbar_style_path ?>");
 </style>
 <script type="text/javascript" src="<?php echo $navbar_script_path ?>" defer></script>
+
 <div id="navbar">
 
   <nav id="nav-up">

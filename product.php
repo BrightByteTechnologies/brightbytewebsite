@@ -15,6 +15,7 @@ $currentFile = 'product.php';
     </style>
     <script type="text/javascript" src="./scripts/product-script.js" defer></script>
     <title>BrightByte Technologies - Produkt</title>
+	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
 </head>
 
 <body>

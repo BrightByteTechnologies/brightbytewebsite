@@ -8,6 +8,8 @@ $currentFile = 'order-demo.php';
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
+
     <style>
         @import url("css/root.css");
         @import url("css/oder-demo-style.css");
