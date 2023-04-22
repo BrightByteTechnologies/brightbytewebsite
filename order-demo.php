@@ -1,34 +1,6 @@
 <?php
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'order-demo.php';
-
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "bevbot";
-$connection = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-// Check if the connection was successful
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error); // Terminate the script if the connection failed
-}
-
-$sql = "SELECT * FROM items";
-$stmt1 = $connection->prepare($sql);
-$stmt1->execute();
-$result = $stmt1->get_result();
-
-$itemInfo = array();
-while ($row = $result->fetch_assoc()) {
-    $itemInfo[] = array(
-        "itemId" => $row["id"],
-        "itemCategoryId" => $row["itemCategoryId"],
-        "itemName" => $row["itemName"],
-        "itemDesc" => $row["itemDesc"],
-        "itemPrice" => $row["itemPrice"]
-    );
-}
-$result->free_result();
 ?>
 
 <!Doctype HTML>
@@ -79,25 +51,54 @@ $result->free_result();
         </div>
     </div>
     <div class="menu-items">
-        <?php
-        $counter = 1;
-        foreach ($itemInfo as $item) :
-            $name = $item['itemName'];
-            $price = $item['itemPrice'];
-            $itemId = "$counter";
-        ?>
-            <div class="item" id="<?= $itemId ?>" onclick="order(event)">
+            <div class="item" id="1" onclick="order(event)">
                 <div class="content-top">
-                    <img src="pictures/placeholder.png" class="item-image">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
                 </div>
                 <div class="content-bottom">
-                    <p class="item-info"><?= "<span class='item-name'>$name</span> <br> <b class='item-price'>$price</b> €" ?></p>
+                    <p class="item-info"><span class='item-name'>Cola</span> <br> <b class='item-price'>1.23</b> €</p>
                 </div>
-            </div>
-        <?php
-            $counter++;
-        endforeach;
-        ?>
+        </div>
+                    <div class="item" id="2" onclick="order(event)">
+                <div class="content-top">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
+                </div>
+                <div class="content-bottom">
+                    <p class="item-info"><span class='item-name'>Cola Vanille</span> <br> <b class='item-price'>1.23</b> €</p>
+                </div>
+        </div>
+                    <div class="item" id="3" onclick="order(event)">
+                <div class="content-top">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
+                </div>
+                <div class="content-bottom">
+                    <p class="item-info"><span class='item-name'>Fanta</span> <br> <b class='item-price'>1.23</b> €</p>
+                </div>
+        </div>
+                    <div class="item" id="4" onclick="order(event)">
+                <div class="content-top">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
+                </div>
+                <div class="content-bottom">
+                    <p class="item-info"><span class='item-name'>Fanta Mango</span> <br> <b class='item-price'>1.23</b> €</p>
+                </div>
+        </div>
+                    <div class="item" id="5" onclick="order(event)">
+                <div class="content-top">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
+                </div>
+                <div class="content-bottom">
+                    <p class="item-info"><span class='item-name'>Sprite</span> <br> <b class='item-price'>1.23</b> €</p>
+                </div>
+        </div>
+                    <div class="item" id="6" onclick="order(event)">
+                <div class="content-top">
+                    <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
+                </div>
+                <div class="content-bottom">
+                    <p class="item-info"><span class='item-name'>Energy Drink</span> <br> <b class='item-price'>1.23</b> €</p>
+                </div>
+        </div>
     </div>
 </body>
 
