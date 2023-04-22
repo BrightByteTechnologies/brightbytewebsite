@@ -54,18 +54,12 @@ $currentFile = 'verwaltung.php';
                             <img alt="jonas" src="./pictures/teampics/Nik.PNG" />
                         </a>
                     </li>
+                    <---Dies kann so stehen bleiben:-->
                     <li>
                         <a class="profile">
                             <h4 class="profile__name">Aaron Vössing</h4>
                             <p class="para">Stellvertretender Projektleiter</p>
-                            <img alt="karamjit" src="./pictures/teampics/Aaron.jpg" />
-                        </a>
-                    </li>
-                    <li>
-                        <a class="profile">
-                            <h4 class="profile__name">David Reichstein</h4>
-                            <p class="para">Verwaltung</p>
-                            <img alt="chengxin" src="./pictures/teampics/nopics.png" />
+                            <img alt="karamjit" src="https://cdn.row-hosting.de/BBT/Teams/Hardware/Aaron.jpg" />
                         </a>
                     </li>
                 </ul>
