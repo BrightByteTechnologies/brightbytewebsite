@@ -5,7 +5,7 @@ $profilesList = "<ul class='auto-grid' role='list' id='profilesList'>";
 foreach ($responseData as $person) {
     $firstName = $person['firstName'];
     $lastName = $person['lastName'];
-    $position = $person['team'];
+    $position = $person['position'];
     $url = $person['url'];
 
     $profilesList .= '<li>';
