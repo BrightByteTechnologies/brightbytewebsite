@@ -1,6 +1,34 @@
 <?php
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'product.php';
+
+require_once("includes/functions/misc/api/apiRequest.php");
+$endpoint = 'http://192.168.0.176:3000/timeline';
+$method = 'GET';
+$keyIndex = 0;
+
+$responseData = makeRequest($endpoint, $method, $keyIndex);
+
+foreach ($responseData as $timeline) {
+    $id = $timeline['id'];
+    $date = $timeline['date'];
+    $desc = $timeline['description'];
+    $url = $timeline['url'];
+
+    $timelineList .= "<div class='timeline sliding'>";
+    $timelineList .= "<img class='tl-bg' src='.$url .' alt='Background'>";
+    $timelineList .= "<div class='tl-content'>";
+    $timelineList .= "<div class='tl-img-panel'>";
+    $timelineList .= "<img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>";
+    $timelineList .= "</div>";
+    $timelineList .= "<div class='tl-title'>";
+    $timelineList .= "<h2>.$date.</h2>";
+    $timelineList .= "</div>";
+    $timelineList .= "<div class='tl-text'>";
+    $timelineList .= "<p class='tl-p'>.$desc.</p>";
+    $timelineList .= " </div></div></div>";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -66,90 +94,7 @@ $currentFile = 'product.php';
     <div class="timeline-container">
         <div class="timeline-box">
             <a class="time-forward " onclick="prevSlide()">&#10094;</a>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/timeline/timeline-1.jpg' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>Anfang</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyz</p>
-                    </div>
-                </div>
-            </div>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/timeline/timeline-2.jpg' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>20.04.2023</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyz</p>
-                    </div>
-                </div>
-            </div>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/start-logo-bbs.png' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/bb-logo-removebg.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>3</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>TextText</p>
-                    </div>
-                </div>
-            </div>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/bb-logo-removebg.png' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>4</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>TextText</p>
-                    </div>
-                </div>
-            </div>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/bb-logo-removebg.png' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>5</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>TextText</p>
-                    </div>
-                </div>
-            </div>
-            <div class='timeline sliding'>
-                <img class='tl-bg' src='./pictures/bb-logo-removebg.png' alt='Background'>
-                <div class='tl-content'>
-                    <div class='tl-img-panel'>
-                        <img class='tl-img' src='./pictures/start-logo-bbs.png' alt='Icon'>
-                    </div>
-                    <div class='tl-title'>
-                        <h2>6</h2>
-                    </div>
-                    <div class='tl-text'>
-                        <p class='tl-p'>TextText</p>
-                    </div>
-                </div>
-            </div>
+                <?php echo $timelineList; ?>
             <a class=" time-backward" onclick="nextSlide()">&#10095;</a>
         </div>
     </div>
