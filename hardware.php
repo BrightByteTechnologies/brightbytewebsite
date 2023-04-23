@@ -36,7 +36,7 @@ $profilesList = createList($responseData);
     <?php include('includes/navbar/navbar.php') ?>
     <div class="main">
         <section class="d-flex justify-content-center align-items-center softGIF">
-            <img class="d-block" src="pictures/teampics/software.gif">
+            <img class="d-block" src="https://cdn.row-hosting.de/BBT/Gifs/software.gif">
         </section>
 
         <h1 class="text-center display-1">Lernen Sie unser Hardware-Team kennen</h1>
