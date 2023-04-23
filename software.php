@@ -1,6 +1,16 @@
 <?php
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'software.php';
+
+require_once("includes/functions/misc/api/apiRequest.php");
+require_once("includes/functions/misc/api/createProfilesList.php");
+$endpoint = 'http://192.168.0.176:3000/software';
+$method = 'GET';
+$keyIndex = 0;
+
+$responseData = makeRequest($endpoint, $method, $keyIndex);
+
+$profilesList = createList($responseData);
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,36 +50,7 @@ $currentFile = 'software.php';
       <h3 class="text-center">Lassen Sie sich von unserem Team von Softwareentwicklern inspirieren. Wir verwandeln Ihre Ideen in Realität.</h3>
 
       <div class="team">
-        <ul class="auto-grid" role="list">
-          <li>
-            <a class="profile">
-              <h4 class="profile__name">Domenic Kirchner</h4>
-              <p class="para">Teamleader</p>
-              <img alt="domenic" src="./pictures/teampics/Domenic.png" />
-            </a>
-          </li>
-          <li>
-            <a class="profile">
-              <h4 class="profile__name">Jonas A. Hagemann</h4>
-              <p class="para">Softwareentwickler</p>
-              <img alt="jonas" src="./pictures/teampics/Jonas.jpg" />
-            </a>
-          </li>
-          <li>
-            <a class="profile">
-              <h4 class="profile__name">Singh Karamjit Kaur</h4>
-              <p class="para">Softwareentwicklerin</p>
-              <img alt="karamjit" src="./pictures/teampics/Karamjit.jpg" />
-            </a>
-          </li>
-          <li>
-            <a class="profile">
-              <h4 class="profile__name">Chengxin Yang</h4>
-              <p class="para">Softwareentwickler</p>
-              <img alt="chengxin" src="./pictures/teampics/Chengxin.png" />
-            </a>
-          </li>
-        </ul>
+        <?php echo $profilesList; ?>
       </div>
     </div>
     <h2 class="text-center"><q>Ein Team, ein Ziel: herausragende Software.</q></h2>
