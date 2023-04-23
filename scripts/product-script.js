@@ -1,3 +1,32 @@
+fetch('includes/product-info.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('bevDesc').textContent = data.BevBot.description;
+    document.getElementById('bevWhy').textContent = data.Why.description[0].detail;
+
+    const benefitDiv = document.getElementById('benefit');
+    for(let i = 0; i < data.Why.description[1].detail.length; i++) {
+      const name = data.Why.description[1].detail[i].name;
+      const description = data.Why.description[1].detail[i].description;
+
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "des-name lb";
+      nameSpan.textContent = name;
+
+      const descSpan = document.createElement("span");
+      descSpan.className = "des-detail";
+      descSpan.textContent = description;
+      benefitDiv.appendChild(nameSpan);
+      benefitDiv.appendChild(descSpan);
+    }
+    
+
+  })
+  .catch(error => {
+    // Verbindung fehlgeschlagen
+    console.error('Verbindung fehlgeschlagen', error);
+  });
+
 //---- Slideshow for product Area ----//
 let slideIndex = 1;
 showSlides(slideIndex);

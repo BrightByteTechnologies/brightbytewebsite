@@ -1,0 +1,42 @@
+{
+    "BevBot": {
+        "description": "BevBot ist ein fortschrittlicher Roboter für die automatisierte Getränkelieferung. Kunden können ihre Bestellung über eine Smartphone-App aufgeben und BevBot erledigt den Rest, um jedes Getränk pünktlich und in einwandfreiem Zustand zu liefern."
+    },
+    "Why": {
+        "description": [
+            {
+                "title": "Warum brauchen Sie BevBot?",
+                "detail": "BevBot bietet eine bequeme und zeitsparende Lösung für Menschen, die einen geschäftigen Lebensstil haben oder eine einfache und stressfreie Möglichkeit suchen, Getränke zu bestellen und zu erhalten. In einem Restaurantbetrieb kann BevBot eingesetzt werden, um den Service zu beschleunigen, Wartezeiten zu verkürzen und den Arbeitsaufwand für das Personal zu reduzieren. BevBot ist mit modernster Sicherheitstechnologie ausgestattet, um sowohl sich selbst als auch die Getränke während der Lieferung sicher zu halten."
+            },
+            {
+                "title": "Was sind die Vorteile?",
+                "detail": [
+                    {
+                        "name": "Effizienz",
+                        "description": "Ein Servierroboter kann die Effizienz und Geschwindigkeit des Serviceprozesses verbessern, indem er Bestellungen schnell und genau entgegennimmt und die Getränke ohne Verzögerungen oder Fehler liefert."
+                    },
+                    {
+                        "name": "Reduzierung von Wartezeiten",
+                        "description": "Kunden müssen nicht mehr lange auf ihre Bestellungen warten, da der Roboter in der Lage ist, mehrere Bestellungen gleichzeitig zu bearbeiten und zu liefern."
+                    },
+                    {
+                        "name": "Konsistenz",
+                        "description": "Ein Servierroboter liefert Getränke auf eine konsistente Art und Weise, wodurch eine hohe Qualität des Service gewährleistet wird."
+                    },
+                    {
+                        "name": "Kosteneffizienz",
+                        "description": "Da der Roboter die Arbeit von menschlichen Servicekräften übernimmt, können die Kosten für die Einstellung von Personal reduziert werden."
+                    },
+                    {
+                        "name": "Kontaktlosigkeit",
+                        "description": "In der heutigen Zeit, in der die Gesundheit und Sicherheit der Kunden von großer Bedeutung ist, kann ein Servierroboter eine kontaktlose Option bieten, bei der Kunden ihre Bestellungen über eine Smartphone-App aufgeben können und keine Interaktion mit dem Personal erforderlich ist."
+                    },
+                    {
+                        "name": "Attraktivität",
+                        "description": "Ein Servierroboter kann ein attraktives und innovatives Element in einem Restaurant oder einem anderen Geschäft sein und kann dazu beitragen, Kunden anzuziehen und sie zu beeindrucken."
+                    }
+                ]
+            }
+        ]
+    }
+}

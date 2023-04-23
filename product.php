@@ -50,40 +50,15 @@ $currentFile = 'product.php';
     <div class="bb-why">
         <div class='bb-des'>
             <h1 class='lb'>Was ist BevBot?</h1>
-            <p class='lb'>BevBot ist ein fortschrittlicher Roboter f&#252;r die automatisierte Getr&#228;nkelieferung. <br>
-                Kunden k&#246;nnen ihre Bestellung &#252;ber eine Smartphone-App aufgeben und BevBot erledigt den Rest,
-                um jedes Getr&#228;nk p&#252;nktlich und in einwandfreiem Zustand zu liefern.</p>
+            <p class='lb' id='bevDesc'></p>
         </div>
         <div class='bb-des'>
             <h1 class='lb'>Warum brauchen Sie BevBot?</h1>
-            <p class='lb'>BevBot bietet eine bequeme und zeitsparende L&#246;sung f&#252;r Menschen, die einen gesch&#228;ftigen
-                Lebensstil haben oder eine einfache und stressfreie M&#246;glichkeit suchen,
-                Getr&#228;nke zu bestellen und zu erhalten. In einem Restaurantbetrieb kann BevBot eingesetzt werden, um den Service zu beschleunigen,
-                Wartezeiten zu verk&#252;rzen und den Arbeitsaufwand f&#252;r das Personal zu reduzieren. BevBot ist mit modernster Sicherheitstechnologie ausgestattet,
-                um sowohl sich selbst als auch die Getr&#228;nke w&#228;hrend der Lieferung sicher zu halten.</p>
+            <p class='lb' id='bevWhy'></p>
         </div>
         <div class='bb-des'>
             <h1 class="lb">Was sind die Vorteile?</h1>
             <div class="lb" id="benefit">
-                <span class="des-name lb"> 1: Effizienz<br></span>
-                <span class="des-detail">Ein Servierroboter kann die Effizienz und Geschwindigkeit des Serviceprozesses verbessern,
-                    indem er Bestellungen schnell und genau entgegennimmt und die Getr&auml;nke ohne Verz&ouml;gerungen oder Fehler liefert.</span>
-                <span class="des-name"> 2: Reduzierung von Wartezeiten<br><br></span>
-                <span class="des-detail">Kunden m&uuml;ssen nicht mehr lange auf ihre Bestellungen warten,
-                    da der Roboter in der Lage ist, mehrere Bestellungen gleichzeitig zu bearbeiten und zu liefern.</span>
-                <span class="des-name">3: Konsistenz<br></span>
-                <span class="des-detail">Ein Servierroboter liefert Getr&auml;nke auf eine konsistente Art und Weise,
-                    wodurch eine hohe Qualit&auml;t des Service gew&auml;hrleistet wird.</span>
-                <span class="des-name"> 4: Kosteneffizienz<br></span>
-                <span class="des-detail">Da der Roboter die Arbeit von menschlichen Servicekr&auml;ften &uuml;bernimmt,
-                    k&ouml;nnen die Kosten f&uuml;r die Einstellung von Personal reduziert werden.</span>
-                <span class="des-name"> 6: Kontaktlosigkeit<br></span>
-                <span class="des-detail">In der heutigen Zeit, in der die Gesundheit und Sicherheit der Kunden von gro&szlig;er Bedeutung ist,
-                    kann ein Servierroboter eine kontaktlose Option bieten, bei der Kunden ihre Bestellungen &uuml;ber eine Smartphone-App aufgeben k&ouml;nnen
-                    und keine Interaktion mit dem Personal erforderlich ist.</span>
-                <span class="des-name"> 7: Attraktivit&auml;t<br></span>
-                <span class="des-detail">Ein Servierroboter kann ein attraktives und innovatives Element in einem Restaurant oder einem anderen Gesch&auml;ft
-                    sein und kann dazu beitragen, Kunden anzuziehen und sie zu beeindrucken.</span>
             </div>
         </div>
     </div>

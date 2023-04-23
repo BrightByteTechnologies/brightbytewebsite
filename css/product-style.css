@@ -96,6 +96,7 @@ button:hover {
 
 .des-name {
     border-bottom: var(--logocolor) 1px dashed;
+    font-weight: bold;
 }
 
 .lb {
