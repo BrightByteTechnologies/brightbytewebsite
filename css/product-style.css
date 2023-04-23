@@ -252,6 +252,9 @@ button:hover {
     height: 100%;
     min-height: 500px;
     max-height: 500px;
+
+    margin-left: .5%;
+    margin-right: .5%;
 }
 
 /*hovering div makes background blur*/
@@ -278,7 +281,7 @@ button:hover {
     max-width: 400px;
     height: 100%;
     min-height: 500px;
-    max-height: 500px;
+    max-height: 550px;
     background-color: #234c5c;
     position: absolute;
     transition: all .4s;
@@ -310,6 +313,7 @@ button:hover {
 .tl-content {
     position: relative;
     top: 70px;
+    height: fit-content;
     text-align: center;
     transition: all .4s ease;
 }
@@ -325,7 +329,7 @@ button:hover {
     cursor: pointer;
     position: sticky;
     width: auto;
-    height: 500%;
+    height: auto;
     margin: 0;
     margin-top: 5%;
     padding: 1%;
@@ -442,7 +446,7 @@ button:hover {
     .tl-bg,
     .timeline {
         max-width: 300px;
-        max-height: 400px;
+        max-height: 450px;
     }
 
     .tl-bg {
