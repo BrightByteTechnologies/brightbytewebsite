@@ -101,7 +101,7 @@ $currentFile = 'index.php';
             <div class="row">
                 <h1 class="text-center">Über Uns</h1>
                 <div class="col-sm">
-                    <img src="./pictures/bb-logo-removebg.png" class="d-block mx-auto text-center img-thumbnail"
+                    <img src="https://cdn.row-hosting.de/BBT/Website/bb-logo-removebg.png" class="d-block mx-auto text-center img-thumbnail"
                         alt="BevBot LOGO">
                 </div>
                 

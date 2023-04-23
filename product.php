@@ -9,6 +9,7 @@ $keyIndex = 0;
 
 $responseData = makeRequest($endpoint, $method, $keyIndex);
 
+$timelineList = "";
 foreach ($responseData as $timeline) {
     $id = $timeline['id'];
     $date = $timeline['date'];
