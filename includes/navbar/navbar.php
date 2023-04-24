@@ -11,6 +11,8 @@ $navbar_style_path = getRelativePath($currentFile, $navbar_style_file);
 $bb_logo_path = getRelativePath($currentFile, $bb_logo_file);
 $flag_germany_path = getRelativePath($currentFile, $flag_germany_file);
 
+$legalNotice_file = "legalNotice.php";
+$legalNotice_path = getRelativePath($currentFile, $legalNotice_file);
 
 $homepage_file = "index.php";
 $homepage_path = getRelativePath($currentFile, $homepage_file);
@@ -70,6 +72,7 @@ session_start();
             <a href="<?php echo $hardware_path ?>">Hardware</a>
           </div>
         </li>
+        <li><a href="<?php echo $legalNotice_path ?>">Impressum</a></li>
       </div>
       <span id="openbtn" onclick="openNav()">=</span>
     </div>
@@ -91,5 +94,6 @@ session_start();
         <a href="<?php echo $hardware_path ?>">Hardware</a>
       </div>
     </li>
+    <li><a href="<?php echo $legalNotice_path ?>">Impressum</a></li>
   </nav>
 </div>

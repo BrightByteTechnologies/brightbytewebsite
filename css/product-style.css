@@ -297,18 +297,12 @@ button:hover {
 }
 
 .tl-img {
-    width: auto;
-    height: auto;
-    width: 100%;
-    max-width: 200px;
-    height: 100%;
-    min-height: 200px;
-    max-height: 200px;
+    width: 25%;
+    height: 25%;
     position: relative;
-    top: 0;
-    left: 0;
+    top: -40;
+    left: -60;
 }
-
 
 .tl-content {
     position: relative;
