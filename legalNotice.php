@@ -8,6 +8,7 @@ $currentFile = 'legalNotice.php';
 
     </head>
     <body>
+    <?php include('includes/navbar/navbar.php') ?>
         <h1>Impressum</h1>
         <h2>Angaben gem. §5 TMG:</h2>
         <p>Domenic Kirchner</p>

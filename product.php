@@ -3,7 +3,7 @@ require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'product.php';
 
 require_once("includes/functions/misc/api/apiRequest.php");
-$endpoint = 'http://192.168.0.176:3000/timeline';
+$endpoint = 'api.brightbytetechnologies.de/timeline';
 $method = 'GET';
 $keyIndex = 0;
 

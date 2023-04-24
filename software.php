@@ -4,7 +4,7 @@ $currentFile = 'software.php';
 
 require_once("includes/functions/misc/api/apiRequest.php");
 require_once("includes/functions/misc/api/createProfilesList.php");
-$endpoint = 'http://192.168.0.176:3000/software';
+$endpoint = 'api.brightbytetechnologies.de/software';
 $method = 'GET';
 $keyIndex = 0;
 
