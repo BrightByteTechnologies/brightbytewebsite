@@ -1,5 +1,6 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 #company-logo {
     background-color: var(--logocolor);
     height: 80px;
-    width: auto;
+    width: auto !important;
     position: relative;
     margin-bottom: 10px;
     align-items: center;
@@ -159,24 +160,14 @@ body {
 
 @media (max-width: 800px) {
 
-    * {
-        user-select: none;
-    }
-
     #navbar {
         overflow-y: hidden;
-        height: 100px;
         width: 100%;
-        background-color: var(--logocolor);
-        align-items: center;
-        justify-content: center;
         transition: all 0.5s;
     }
 
     #nav-up {
-        display: block;
         height: 100%;
-        text-align: center;
     }
 
     #company-logo {

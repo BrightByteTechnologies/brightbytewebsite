@@ -74,9 +74,6 @@ foreach ($responseData as $timeline) {
         <div class="bevbotright">
             <h1 id="name">BevBot</h1>
             <p id="p1">499.99 &#8364;</p>
-            <form action="#">
-                <button type="button" id="buy">Jetzt Einkaufen</button>
-            </form>
         </div>
     </div>
     <div class="bb-why">
