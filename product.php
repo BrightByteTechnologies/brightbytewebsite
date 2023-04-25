@@ -73,7 +73,9 @@ foreach ($responseData as $timeline) {
         </div>
         <div class="bevbotright">
             <h1 id="name">BevBot</h1>
+            <p id="mini">(Nicht zum Verkauf)</p>
             <p id="p1">499.99 &#8364;</p>
+            <p id="mini">(Beispiel Preis)</p>
         </div>
     </div>
     <div class="bb-why">

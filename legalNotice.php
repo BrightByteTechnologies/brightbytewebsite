@@ -5,7 +5,10 @@ $currentFile = 'legalNotice.php';
 <!DOCTYPE html>
 <html>
     <head>
-
+        <style>
+            @import url("css/root.css");
+            body {background-color: var(--logocolor-light);}
+        </style>
     </head>
     <body>
     <?php include('includes/navbar/navbar.php') ?>

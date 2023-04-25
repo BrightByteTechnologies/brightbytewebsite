@@ -24,7 +24,7 @@ h2 {
 p,
 span {
     color: aliceblue;
-    text-shadow: 0 0 5px var(--logocolor), 0 0 20px black;
+    text-shadow: 0 0 5px var(--logocolor), 0 0 1px rgb(255, 255, 255);
     clear: both;
 }
 
@@ -74,7 +74,7 @@ button:hover {
 
 .bb-why {
     margin-top: 8%;
-    background: linear-gradient(180deg, rgba(97, 130, 153, 1) 0%, var(--logocolor-light) 10%, var(--logocolor-light) 90%, rgba(97, 130, 153, 1) 100%);
+    background: linear-gradient(180deg, rgba(97, 130, 153, 1) 0%, var(--logocolor) 90%, rgba(97, 130, 153, 1) 100%);
 }
 
 .bb-des {
@@ -111,10 +111,14 @@ button:hover {
 
 #name {
     font-size: 64px;
+    float: right;
+    margin-bottom: 0;
 }
 
 #p1 {
     font-size: 40px;
+    margin: 0;
+    float: right;
     font-style: oblique;
 }
 
@@ -122,6 +126,15 @@ button:hover {
     font-size: 50px;
 }
 
+#mini {
+    font-size: small;
+    color: var(--logocolor-light);
+    text-shadow: 6px 6px 4px black;
+    margin: 0;
+    padding: 0;
+    opacity: 80%;
+    float: right;
+}
 
 #bbpic {
     width: max-content;
@@ -451,7 +464,8 @@ button:hover {
         padding-bottom: 25%;
     }
 
-    .tl-content, .tl-content:hover {
+    .tl-content,
+    .tl-content:hover {
         top: 0;
     }
 
