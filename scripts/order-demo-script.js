@@ -88,7 +88,7 @@ function order() {
         // Close amount selection element
         closeAmountSelection(amountSele);
     });
-    
+
     amountSele.appendChild(amountSub);
     document.body.appendChild(amountSele);
 }
@@ -155,8 +155,10 @@ function updateBasketCount() {
 }
 
 function closeAmountSelection(amountSele) {
-    amountSele.parentNode.removeChild(amountSele);
-    overlay.style.display = "none";
+    if(amountSele !== undefined) {
+        amountSele.parentNode.removeChild(amountSele);
+        overlay.style.display = "none";
+    }
 }
 
 function resetConfirmation() {
