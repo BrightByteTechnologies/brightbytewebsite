@@ -46,7 +46,7 @@ session_start();
 
   <nav id="nav-up">
     <div id="brand-container">
-      <img id="company-logo" src="<?php echo $bb_logo_path ?>">
+      <a href="<?php echo $homepage_path ?>"><img id="company-logo" src="<?php echo $bb_logo_path ?>"></a>
       <span id="company-name">BrightByte Technologies</span>
     </div>
 
