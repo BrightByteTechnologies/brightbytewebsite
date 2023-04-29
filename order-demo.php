@@ -12,7 +12,7 @@ $currentFile = 'order-demo.php';
 
     <style>
         @import url("css/root.css");
-        @import url("css/oder-demo-style.css");
+        @import url("css/order-demo-style.css");
     </style>
     <script src="./scripts/order-demo-script.js" defer></script>
 </head>
