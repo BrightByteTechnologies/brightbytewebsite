@@ -5,6 +5,7 @@ $currentFile = 'legalNotice.php';
 <!DOCTYPE html>
 <html>
     <head>
+    <title>BrightByte Technologies - Impressum</title>
         <style>
             @import url("css/root.css");
             body {background-color: var(--logocolor-light);}

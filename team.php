@@ -30,7 +30,7 @@ $currentFile = 'team.php';
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <title>BrightByte Technologies - Team</title>
+    <title>BrightByte Technologies - Mitarbeiter</title>
 	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
 </head>
 

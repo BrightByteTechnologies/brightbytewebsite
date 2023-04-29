@@ -8,6 +8,7 @@ $currentFile = 'order-demo.php';
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrightByte Technologies - Order-Demo </title>
 	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
 
     <style>
