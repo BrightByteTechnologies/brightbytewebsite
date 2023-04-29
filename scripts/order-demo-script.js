@@ -31,10 +31,12 @@ function order() {
     var itemName = event.currentTarget.querySelector(".item-name").textContent;
     itemName = DOMPurify.sanitize(itemName); // Sanitize the itemName string
     overlay.style.display = "block";
+
     // Create amount selection element
     const amountSele = document.createElement("div");
     amountSele.classList.add("amountSele");
-    amountSele.textContent = "Amount:";
+    amountSele.textContent = "Menge:";
+
     // Create the input element (Number)
     amountInput = document.createElement("input");
     amountInput.setAttribute("type", "number");
@@ -44,36 +46,41 @@ function order() {
     amountInput.setAttribute("min", 1);
     amountInput.setAttribute("max", 20);
     amountSele.appendChild(amountInput);
+
     // Create the submit button
     amountSub = document.createElement("input");
-    amountSub.setAttribute("value", "Order");
+    amountSub.setAttribute("value", "In den Warenkorb");
     amountSub.setAttribute("type", "submit");
+
     amountSub.addEventListener("click", function () {
         // Get selected amount and update basket
         var itemAmount = parseInt(document.getElementById("itemAmount").value);
         if (itemAmount > 0 && itemAmount != NaN) {
             if (parseInt(basketCount.textContent) + itemAmount > 20) {
                 closeAmountSelection(amountSele);
-                alert("20 Orders per person!");
+                alert("Maximal 20 Getränke pro Person!");
                 return;
             }
         } else {
-            alert("Can't be empty");
+            alert("Eingabe kann nicht leer sein");
             return;
         }
         
         updateBasket(itemName, itemAmount);
+
         // Visual effect
         document.getElementById("basketBtn").classList.add("flash");
         setTimeout(function () {
             document.getElementById("basketBtn").classList.remove("flash");
         }, 500);
+
         // Show notification
         const notification = document.createElement('div');
         notification.textContent = 'Item added to basket';
         notification.classList.add('notification');
         notification.classList.add('swipeup');
         document.body.appendChild(notification);
+
         // Remove notification after a delay
         setTimeout(() => {
             document.body.removeChild(notification);
@@ -81,6 +88,7 @@ function order() {
         // Close amount selection element
         closeAmountSelection(amountSele);
     });
+    
     amountSele.appendChild(amountSub);
     document.body.appendChild(amountSele);
 }
@@ -116,10 +124,12 @@ function updateBasket(itemName, itemAmount) {
         nameCell.textContent = escapeHtml(itemName);
         nameCell.classList.add("in-basket");
         item.appendChild(nameCell);
+
         var countCell = document.createElement("td");
         countCell.textContent = itemAmount;
         countCell.classList.add("item-count");
         item.appendChild(countCell);
+
         // Create the button to remove item
         var minusCell = document.createElement("button");
         minusCell.textContent = "✖";
@@ -129,6 +139,7 @@ function updateBasket(itemName, itemAmount) {
             updateBasketCount();
         });
         item.appendChild(minusCell);
+
         document.getElementById("items-in-basket").appendChild(item);
     }
     updateBasketCount();
@@ -152,30 +163,37 @@ function resetConfirmation() {
     resetButton.setAttribute("disabled", "");
     resetDiv = document.createElement("div");
     resetDiv.classList.add("reset");
-    resetDiv.textContent = "Remove Everything?";
     basket.appendChild(resetDiv);
+
+    var questionSpan = document.createElement("span");
+    questionSpan.setAttribute("id", "resetSpan");
+    questionSpan.textContent = "Warenkorb leeren?";
+    resetDiv.appendChild(questionSpan);
+
     resetCheck = document.createElement("input");
     resetCheck.setAttribute("id", "resetCheck");
-    resetCheck.setAttribute("value", "Yes");
+    resetCheck.setAttribute("value", "Ja");
     resetCheck.setAttribute("type", "submit");
     resetDiv.appendChild(resetCheck);
-    resetCencel = document.createElement("input");
-    resetCencel.setAttribute("id", "resetCencel");
-    resetCencel.setAttribute("value", "No");
-    resetCencel.setAttribute("type", "submit");
-    resetDiv.appendChild(resetCencel);
+
+    resetCancel = document.createElement("input");
+    resetCancel.setAttribute("id", "resetCancel");
+    resetCancel.setAttribute("value", "Nein");
+    resetCancel.setAttribute("type", "submit");
+    resetDiv.appendChild(resetCancel);
+
     resetCheck.addEventListener("click", function () {
         var table = document.getElementById("items-in-basket");
         resetBasket();
         basket.removeChild(resetDiv);
         resetButton.removeAttribute("disabled", "");
     })
-    resetCencel.addEventListener("click", function () {
+    resetCancel.addEventListener("click", function () {
         basket.removeChild(resetDiv);
         resetButton.removeAttribute("disabled", "");
     })
-}
 
+}
 function resetBasket() {
     var items = document.querySelectorAll("#items-in-basket tr");
     for (var i = 0; i < items.length; i++) {
