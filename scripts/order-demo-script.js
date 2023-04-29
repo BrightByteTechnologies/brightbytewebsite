@@ -8,16 +8,6 @@ var overlay = document.getElementById("basket-overlay");
 var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
-function openBasket() {
-    basket.classList.add("show");
-    overlay.style.display = "block";
-}
-
-function closeBasket() {
-    basket.classList.remove("show");
-    overlay.style.display = "none";
-}
-
 function escapeHtml(unsafe) {
     return unsafe.replace(/[&<"']/g, function (match) {
         switch (match) {
@@ -35,6 +25,74 @@ function escapeHtml(unsafe) {
                 return match;
         }
     });
+}
+
+function order() {
+    var itemName = event.currentTarget.querySelector(".item-name").textContent;
+    itemName = DOMPurify.sanitize(itemName); // Sanitize the itemName string
+    overlay.style.display = "block";
+    // Create amount selection element
+    const amountSele = document.createElement("div");
+    amountSele.classList.add("amountSele");
+    amountSele.textContent = "Amount:";
+    // Create the input element (Number)
+    amountInput = document.createElement("input");
+    amountInput.setAttribute("type", "number");
+    amountInput.setAttribute("id", "itemAmount");
+    amountInput.setAttribute("value", 1);
+    amountInput.setAttribute("oninput", "validity.valid||(value='')")
+    amountInput.setAttribute("min", 1);
+    amountInput.setAttribute("max", 20);
+    amountSele.appendChild(amountInput);
+    // Create the submit button
+    amountSub = document.createElement("input");
+    amountSub.setAttribute("value", "Order");
+    amountSub.setAttribute("type", "submit");
+    amountSub.addEventListener("click", function () {
+        // Get selected amount and update basket
+        var itemAmount = parseInt(document.getElementById("itemAmount").value);
+        if (itemAmount > 0 && itemAmount != NaN) {
+            if (parseInt(basketCount.textContent) + itemAmount > 20) {
+                closeAmountSelection(amountSele);
+                alert("20 Orders per person!");
+                return;
+            }
+        } else {
+            alert("Can't be empty");
+            return;
+        }
+        
+        updateBasket(itemName, itemAmount);
+        // Visual effect
+        document.getElementById("basketBtn").classList.add("flash");
+        setTimeout(function () {
+            document.getElementById("basketBtn").classList.remove("flash");
+        }, 500);
+        // Show notification
+        const notification = document.createElement('div');
+        notification.textContent = 'Item added to basket';
+        notification.classList.add('notification');
+        notification.classList.add('swipeup');
+        document.body.appendChild(notification);
+        // Remove notification after a delay
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 1000);
+        // Close amount selection element
+        closeAmountSelection(amountSele);
+    });
+    amountSele.appendChild(amountSub);
+    document.body.appendChild(amountSele);
+}
+
+function openBasket() {
+    basket.classList.add("show");
+    overlay.style.display = "block";
+}
+
+function closeBasket() {
+    basket.classList.remove("show");
+    overlay.style.display = "none";
 }
 
 function updateBasket(itemName, itemAmount) {
@@ -85,64 +143,11 @@ function updateBasketCount() {
     basketCount.textContent = count; // Update the basket count element
 }
 
-function order() {
-    var itemName = event.currentTarget.querySelector(".item-name").textContent;
-    overlay.style.display = "block";
-    // Create amount selection element
-    const amountSele = document.createElement("div");
-    amountSele.classList.add("amountSele");
-    amountSele.textContent = "Amount:";
-    // Create the input element (Number)
-    amountInput = document.createElement("input");
-    amountInput.setAttribute("type", "number");
-    amountInput.setAttribute("id", "itemAmount");
-    amountInput.setAttribute("value", 1);
-    amountInput.setAttribute("oninput", "validity.valid||(value='')")
-    amountInput.setAttribute("min", 1);
-    amountInput.setAttribute("max", 20);
-    amountSele.appendChild(amountInput);
-    // Create the submit button
-    amountSub = document.createElement("input");
-    amountSub.setAttribute("value", "Order");
-    amountSub.setAttribute("type", "submit");
-    amountSub.addEventListener("click", function () {
-        // Get selected amount and update basket
-        var itemAmount = parseInt(document.getElementById("itemAmount").value);
-        if (itemAmount > 0 && itemAmount != NaN) {
-            if (parseInt(basketCount.textContent) + itemAmount > 20) {
-                amountSele.parentNode.removeChild(amountSele);
-                overlay.style.display = "none";
-                alert("20 Orders per person!");
-                return;
-            }
-        } else {
-            alert("Can't be empty");
-            return;
-        }
-        
-        updateBasket(itemName, itemAmount);
-        // Visual effect
-        document.getElementById("basketBtn").classList.add("flash");
-        setTimeout(function () {
-            document.getElementById("basketBtn").classList.remove("flash");
-        }, 500);
-        // Show notification
-        const notification = document.createElement('div');
-        notification.textContent = 'Item added to basket';
-        notification.classList.add('notification');
-        notification.classList.add('swipeup');
-        document.body.appendChild(notification);
-        // Remove notification after a delay
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 1000);
-        // Close amount selection element
-        amountSele.parentNode.removeChild(amountSele);
-        overlay.style.display = "none";
-    });
-    amountSele.appendChild(amountSub);
-    document.body.appendChild(amountSele);
+function closeAmountSelection(amountSele) {
+    amountSele.parentNode.removeChild(amountSele);
+    overlay.style.display = "none";
 }
+
 function resetConfirmation() {
     resetButton.setAttribute("disabled", "");
     resetDiv = document.createElement("div");
@@ -169,8 +174,8 @@ function resetConfirmation() {
         basket.removeChild(resetDiv);
         resetButton.removeAttribute("disabled", "");
     })
-
 }
+
 function resetBasket() {
     var items = document.querySelectorAll("#items-in-basket tr");
     for (var i = 0; i < items.length; i++) {
@@ -184,9 +189,13 @@ function remove() {
     parentRow.remove();
 }
 
+overlay.addEventListener("click", function() {
+    closeAmountSelection(document.getElementsByClassName("amountSele")[0]);
+});
+
 payButton.addEventListener("click", function () {
     // Open payment window
-    alert("This is just a Demo");
+    alert("Payment window opened.");
     // Reset basket
     resetBasket();
 });
