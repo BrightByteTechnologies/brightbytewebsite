@@ -8,28 +8,24 @@ var overlay = document.getElementById("basket-overlay");
 var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
-function escapeHtml(unsafe) {
-    return unsafe.replace(/[&<"']/g, function (match) {
-        switch (match) {
-            case "&":
-                return "&amp;";
-            case "<":
-                return "&lt;";
-            case ">":
-                return "&gt;";
-            case "\"":
-                return "&quot;";
-            case "\'":
-                return "&#039;";
-            default:
-                return match;
-        }
-    });
-}
+var products;
+
+jQuery.ajax({
+    type: "GET",
+    url: 'getProducts.php',
+    data: { functionName: 'getProducts' },
+    success: function (response) {
+        products = JSON.parse(response);
+    }
+});
 
 function order() {
     var itemName = event.currentTarget.querySelector(".item-name").textContent;
-    itemName = DOMPurify.sanitize(itemName); // Sanitize the itemName string
+    var itemDesc = event.currentTarget.querySelector(".item-description").textContent;
+
+    itemName = DOMPurify.sanitize(itemName); // Sanitize the strings
+    itemDesc = DOMPurify.sanitize(itemDesc);
+
     overlay.style.display = "block";
 
     // Create amount selection element
@@ -66,26 +62,15 @@ function order() {
             alert("Eingabe kann nicht leer sein");
             return;
         }
-        
-        updateBasket(itemName, itemAmount);
+
+        updateBasket(itemName, itemDesc, itemAmount);
 
         // Visual effect
-        document.getElementById("basketBtn").classList.add("flash");
+        basketBtn.classList.add("flash");
         setTimeout(function () {
-            document.getElementById("basketBtn").classList.remove("flash");
+            basketBtn.classList.remove("flash");
         }, 500);
 
-        // Show notification
-        const notification = document.createElement('div');
-        notification.textContent = 'Item added to basket';
-        notification.classList.add('notification');
-        notification.classList.add('swipeup');
-        document.body.appendChild(notification);
-
-        // Remove notification after a delay
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 1000);
         // Close amount selection element
         closeElement();
     });
@@ -96,51 +81,74 @@ function order() {
 
 function openBasket() {
     basket.style.display = "block";
-    basket.setAttribute("id", "toClose");
     overlay.style.display = "block";
+    basket.setAttribute("id", "toClose");
 }
 
+function updateBasket(itemName, itemDesc, itemAmount) {
+    if (isInProducts(itemName, itemDesc)) {
+        var itemPrice = findEntry(itemName, itemDesc)["totalPrice"];
+        var parsedPrice = parseFloat(itemPrice.replace(',', '.'));
 
-function updateBasket(itemName, itemAmount) {
-    var items = document.querySelectorAll("#items-in-basket tr");
-    var itemFound = false;
+        basketName = `${DOMPurify.sanitize(itemName)} | ${DOMPurify.sanitize(itemDesc)}`;
+        var items = document.querySelectorAll("#items-in-basket tr");
+        var itemFound = false;
 
-    for (var i = 0; i < items.length; i++) {
-        if (items[i].querySelector(".in-basket").textContent === itemName) {
-            var quantity = items[i].querySelector(".item-count");
-            quantity.textContent = parseInt(quantity.textContent) + itemAmount;
-            itemFound = true;
-            break;
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].querySelector(".in-basket").getAttribute("data-item-name") === basketName) {
+                var quantity = items[i].querySelector(".item-count");
+                var totalItem = items[i].querySelector(".item-totalPrice");
+                quantity.textContent = DOMPurify.sanitize(parseInt(quantity.textContent) + itemAmount);
+                totalItem.textContent = DOMPurify.sanitize(parseFloat(totalItem.textContent) + parsedPrice);
+                itemFound = true;
+                break;
+            }
         }
+
+        if (!itemFound) {
+            // Create the table
+            var item = document.createElement("tr");
+            // Create the name/amount of the item and add into the table
+            var nameCell = document.createElement("td");
+            nameCell.textContent = basketName;
+            nameCell.classList.add("in-basket");
+            nameCell.setAttribute("data-item-name", basketName);
+            item.appendChild(nameCell);
+
+            var countCell = document.createElement("td");
+            countCell.textContent = itemAmount;
+            countCell.classList.add("item-count");
+            item.appendChild(countCell);
+
+            var priceCell = document.createElement("td");
+            priceCell.textContent = parsedPrice;
+            priceCell.classList.add("item-price");
+            item.appendChild(priceCell);
+
+            var totalPriceCell = document.createElement("td");
+            var itemPriceTotal = parsedPrice * itemAmount;
+            console.log(itemPriceTotal);
+            totalPriceCell.textContent = itemPriceTotal;
+            totalPriceCell.classList.add("item-totalPrice");
+            item.appendChild(totalPriceCell);
+
+            // Create the button to remove item
+            var minusCell = document.createElement("button");
+            minusCell.textContent = "✖";
+            minusCell.setAttribute("id", "minusBtn");
+            minusCell.addEventListener("click", function () {
+                item.remove();
+                updateBasketCount();
+            });
+            item.appendChild(minusCell);
+
+            document.getElementById("items-in-basket").appendChild(item);
+        }
+        updateBasketCount();
+        createNotification("Item zum Warenkorb hinzugefügt.");
+    } else {
+        createNotification("Kann nicht hinzugefügt werden!");
     }
-
-    if (!itemFound) {
-        // Create the table
-        var item = document.createElement("tr");
-        // Create the name/amount of the item and add into the table
-        var nameCell = document.createElement("td");
-        nameCell.textContent = escapeHtml(itemName);
-        nameCell.classList.add("in-basket");
-        item.appendChild(nameCell);
-
-        var countCell = document.createElement("td");
-        countCell.textContent = itemAmount;
-        countCell.classList.add("item-count");
-        item.appendChild(countCell);
-
-        // Create the button to remove item
-        var minusCell = document.createElement("button");
-        minusCell.textContent = "✖";
-        minusCell.setAttribute("id", "minusBtn");
-        minusCell.addEventListener("click", function () {
-            item.remove();
-            updateBasketCount();
-        });
-        item.appendChild(minusCell);
-
-        document.getElementById("items-in-basket").appendChild(item);
-    }
-    updateBasketCount();
 }
 
 function updateBasketCount() {
@@ -152,12 +160,34 @@ function updateBasketCount() {
     basketCount.textContent = count; // Update the basket count element
 }
 
+function isInProducts(name, desc) {
+    return products.some(item => item.name === name && item.description === desc);
+}
+function findEntry(name, desc) {
+    return products.find(p => p.name === name && p.description === desc);
+}
+
+function createNotification(textContent) {
+    var content = DOMPurify.sanitize(textContent);
+
+    const notification = document.createElement('div');
+    notification.textContent = content;
+    notification.classList.add('notification');
+    notification.classList.add('swipeup');
+    document.body.appendChild(notification);
+
+    // Remove notification after a delay
+    setTimeout(() => {
+        document.body.removeChild(notification);
+    }, 1000);
+}
+
 function closeElement() {
     const closeElement = document.getElementById("toClose");
     closeElement.style.display = "none";
     overlay.style.display = "none";
     closeElement.removeAttribute("id");
-    if(closeElement.className === "amountSele") {
+    if (closeElement.className === "amountSele") {
         closeElement.parentNode.removeChild(closeElement);
     }
 }
@@ -195,8 +225,8 @@ function resetConfirmation() {
         basket.removeChild(resetDiv);
         resetButton.removeAttribute("disabled", "");
     })
-
 }
+
 function resetBasket() {
     var items = document.querySelectorAll("#items-in-basket tr");
     for (var i = 0; i < items.length; i++) {
@@ -210,7 +240,7 @@ function remove() {
     parentRow.remove();
 }
 
-overlay.addEventListener("click", function() {
+overlay.addEventListener("click", function () {
     closeElement();
 });
 

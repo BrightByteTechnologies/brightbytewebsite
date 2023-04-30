@@ -40,6 +40,8 @@ $currentFile = 'order-demo.php';
                         <tr>
                             <th>Item</th>
                             <th>Menge</th>
+                            <th>Preis</th>
+                            <th>Gesamt</th>
                             <th>Entfernen</th>
                         </tr>
                     </thead>
