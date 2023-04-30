@@ -30,7 +30,7 @@ $currentFile = 'order-demo.php';
                 <span id="basketCount">0</span>
             </button>
             <div id="basket-overlay"></div>
-            <div id="basket">
+            <div class="basket">
                 <div id="basket-header">
                     <button id="basket-close">&#10006;</button>
                     <h2>Warenkorb</h2>

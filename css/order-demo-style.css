@@ -31,7 +31,7 @@ body {
   background-color: var(--logocolor-dark);
 }
 
-#basket {
+.basket {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -78,10 +78,6 @@ body {
   height: 100%;
   z-index: 99;
   background-color: rgba(66, 66, 66, 0.5);
-}
-
-#basket.show {
-  display: block;
 }
 
 #basket-header h2 {

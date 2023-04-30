@@ -2,8 +2,8 @@
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'management.php';
 
-require_once("includes/functions/misc/api/apiRequest.php");
-require_once("includes/functions/misc/api/createProfilesList.php");
+require_once("includes/functions/api/apiRequest.php");
+require_once("includes/functions/api/createProfilesList.php");
 $endpoint = 'api.brightbytetechnologies.de/management';
 $method = 'GET';
 $keyIndex = 0;

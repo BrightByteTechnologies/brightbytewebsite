@@ -1,4 +1,4 @@
-var basket = document.getElementById("basket");
+var basket = document.getElementsByClassName("basket")[0];
 var basketBtn = document.getElementById("basketBtn");
 var basketClose = document.getElementById("basket-close");
 var itemsInBasket = document.getElementById("items-in-basket");
@@ -35,6 +35,7 @@ function order() {
     // Create amount selection element
     const amountSele = document.createElement("div");
     amountSele.classList.add("amountSele");
+    amountSele.setAttribute("id", "toClose");
     amountSele.textContent = "Menge:";
 
     // Create the input element (Number)
@@ -86,7 +87,7 @@ function order() {
             document.body.removeChild(notification);
         }, 1000);
         // Close amount selection element
-        closeAmountSelection(amountSele);
+        closeElement();
     });
 
     amountSele.appendChild(amountSub);
@@ -94,14 +95,11 @@ function order() {
 }
 
 function openBasket() {
-    basket.classList.add("show");
+    basket.style.display = "block";
+    basket.setAttribute("id", "toClose");
     overlay.style.display = "block";
 }
 
-function closeBasket() {
-    basket.classList.remove("show");
-    overlay.style.display = "none";
-}
 
 function updateBasket(itemName, itemAmount) {
     var items = document.querySelectorAll("#items-in-basket tr");
@@ -154,11 +152,11 @@ function updateBasketCount() {
     basketCount.textContent = count; // Update the basket count element
 }
 
-function closeAmountSelection(amountSele) {
-    if(amountSele !== undefined) {
-        amountSele.parentNode.removeChild(amountSele);
-        overlay.style.display = "none";
-    }
+function closeElement() {
+    const closeElement = document.getElementById("toClose");
+    closeElement.style.display = "none";
+    overlay.style.display = "none";
+    closeElement.setAttribute("id", "");
 }
 
 function resetConfirmation() {
@@ -210,7 +208,7 @@ function remove() {
 }
 
 overlay.addEventListener("click", function() {
-    closeAmountSelection(document.getElementsByClassName("amountSele")[0]);
+    closeElement();
 });
 
 payButton.addEventListener("click", function () {
@@ -232,5 +230,5 @@ basketBtn.addEventListener("click", function () {
 
 basketClose.addEventListener("click", function () {
     // Close basket
-    closeBasket();
+    closeElement();
 });
