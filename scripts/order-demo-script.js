@@ -156,7 +156,10 @@ function closeElement() {
     const closeElement = document.getElementById("toClose");
     closeElement.style.display = "none";
     overlay.style.display = "none";
-    closeElement.setAttribute("id", "");
+    closeElement.removeAttribute("id");
+    if(closeElement.className === "amountSele") {
+        closeElement.parentNode.removeChild(closeElement);
+    }
 }
 
 function resetConfirmation() {
