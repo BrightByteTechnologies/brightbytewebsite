@@ -8,17 +8,12 @@ var overlay = document.getElementById("basket-overlay");
 var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
-var products;
-var basketItems = {};
+//JSON string
+var productsString = '[{"name":"Cola","description":"Original Cola"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmak"},{"name":"Fanta","description":"Original Fanta"},{"name":"Fanta Mango","description":"Fanta Mango-Style"},{"name":"Fanta","description":"Original Fanta"},{"name":"Sprite","description":"Original Sprite"},{"name":"Monster Energy","description":"Original Monster Energy"}]';
 
-jQuery.ajax({
-    type: "GET",
-    url: 'getProducts.php',
-    data: { functionName: 'getProducts' },
-    success: function (response) {
-        products = JSON.parse(response);
-    }
-});
+// Convert the JSON string to a JavaScript object
+var products = JSON.parse(jsonString);
+var basketItems = {};
 
 function order() {
     var itemName = event.currentTarget.querySelector(".item-name").textContent;

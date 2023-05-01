@@ -63,7 +63,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Cola</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €</p>
+                <p class="item-info"><span class='item-name'>Cola</span> <br> <span class='item-description'>Original Cola</span> <br><b class='item-price'>1.23</b> €</p>
             </div>
         </div>
         <div class="item" id="2" onclick="order(event)">
@@ -71,7 +71,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Cola Vanille</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €
+                <p class="item-info"><span class='item-name'>Cola Vanille</span> <br> <span class='item-description'>Cola mit Vanillegeschmak</span> <br><b class='item-price'>1.23</b> €
                 </p>
             </div>
         </div>
@@ -80,7 +80,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Fanta</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €</p>
+                <p class="item-info"><span class='item-name'>Fanta</span> <br> <span class='item-description'>Original Fanta</span> <br><b class='item-price'>1.23</b> €</p>
             </div>
         </div>
         <div class="item" id="4" onclick="order(event)">
@@ -88,7 +88,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Fanta Mango</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €
+                <p class="item-info"><span class='item-name'>Fanta Mango</span> <br> <span class='item-description'>Fanta Mango-Style</span> <br><b class='item-price'>1.23</b> €
                 </p>
             </div>
         </div>
@@ -97,7 +97,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Sprite</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €</p>
+                <p class="item-info"><span class='item-name'>Sprite</span> <br> <span class='item-description'>Original Sprite</span> <br><b class='item-price'>1.23</b> €</p>
             </div>
         </div>
         <div class="item" id="6" onclick="order(event)">
@@ -105,7 +105,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Energy Drink</span> <br> <span class='item-description'>description</span> <br><b class='item-price'>1.23</b> €
+                <p class="item-info"><span class='item-name'>Monster Energy</span> <br> <span class='item-description'>Original Monster Energy</span> <br><b class='item-price'>1.23</b> €
                 </p>
             </div>
         </div>
