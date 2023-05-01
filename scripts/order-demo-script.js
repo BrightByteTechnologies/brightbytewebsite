@@ -9,6 +9,7 @@ var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
 var products;
+var basketItems = {};
 
 jQuery.ajax({
     type: "GET",
@@ -65,12 +66,6 @@ function order() {
 
         updateBasket(itemName, itemDesc, itemAmount);
 
-        // Visual effect
-        basketBtn.classList.add("flash");
-        setTimeout(function () {
-            basketBtn.classList.remove("flash");
-        }, 500);
-
         // Close amount selection element
         closeElement();
     });
@@ -90,74 +85,80 @@ function updateBasket(itemName, itemDesc, itemAmount) {
         var itemPrice = findEntry(itemName, itemDesc)["totalPrice"];
         var parsedPrice = parseFloat(itemPrice.replace(',', '.'));
 
-        basketName = `${DOMPurify.sanitize(itemName)} | ${DOMPurify.sanitize(itemDesc)}`;
-        var items = document.querySelectorAll("#items-in-basket tr");
+        var basketName = `${DOMPurify.sanitize(itemName)} | ${DOMPurify.sanitize(itemDesc)}`;
         var itemFound = false;
 
-        for (var i = 0; i < items.length; i++) {
-            if (items[i].querySelector(".in-basket").getAttribute("data-item-name") === basketName) {
-                var quantity = items[i].querySelector(".item-count");
-                var totalItem = items[i].querySelector(".item-totalPrice");
-                quantity.textContent = DOMPurify.sanitize(parseInt(quantity.textContent) + itemAmount);
-                totalItem.textContent = DOMPurify.sanitize(parseFloat(totalItem.textContent) + parsedPrice);
+        for (var key in basketItems) {
+            if (key === basketName) {
+                basketItems[key].quantity += itemAmount;
+                basketItems[key].totalPrice += parsedPrice * itemAmount;
                 itemFound = true;
                 break;
             }
         }
 
         if (!itemFound) {
-            // Create the table
-            var item = document.createElement("tr");
-            // Create the name/amount of the item and add into the table
-            var nameCell = document.createElement("td");
-            nameCell.textContent = basketName;
-            nameCell.classList.add("in-basket");
-            nameCell.setAttribute("data-item-name", basketName);
-            item.appendChild(nameCell);
+            basketItems[basketName] = {
+                name: itemName,
+                description: itemDesc,
+                price: parsedPrice,
+                quantity: itemAmount,
+                totalPrice: parsedPrice * itemAmount
+            };
+        }
 
-            var countCell = document.createElement("td");
-            countCell.textContent = itemAmount;
-            countCell.classList.add("item-count");
-            item.appendChild(countCell);
+        createNotification("Item zum Warenkorb hinzugefügt.");
+        flashBasket("white");
+        updateBasketCount();
 
-            var priceCell = document.createElement("td");
-            priceCell.textContent = parsedPrice;
-            priceCell.classList.add("item-price");
-            item.appendChild(priceCell);
+        // Create HTML elements for displaying the items in the basket
+        var itemsInBasket = document.getElementById("items-in-basket");
+        itemsInBasket.innerHTML = "";
+        for (var key in basketItems) {
+            var item = basketItems[key];
+            var itemRow = document.createElement("tr");
 
-            var totalPriceCell = document.createElement("td");
-            var itemPriceTotal = parsedPrice * itemAmount;
-            console.log(itemPriceTotal);
-            totalPriceCell.textContent = itemPriceTotal;
-            totalPriceCell.classList.add("item-totalPrice");
-            item.appendChild(totalPriceCell);
+            var itemNameCell = document.createElement("td");
+            itemNameCell.textContent = item.name + " | " + item.description;
+            itemRow.appendChild(itemNameCell);
+
+            var itemQuantityCell = document.createElement("td");
+            itemQuantityCell.textContent = item.quantity;
+            itemRow.appendChild(itemQuantityCell);
+
+            var itemPriceCell = document.createElement("td");
+            itemPriceCell.textContent = item.price;
+            itemRow.appendChild(itemPriceCell);
+
+            var itemTotalPriceCell = document.createElement("td");
+            itemTotalPriceCell.textContent = item.totalPrice;
+            itemRow.appendChild(itemTotalPriceCell);
 
             // Create the button to remove item
             var minusCell = document.createElement("button");
             minusCell.textContent = "✖";
             minusCell.setAttribute("id", "minusBtn");
             minusCell.addEventListener("click", function () {
-                item.remove();
+                itemRow.remove();
                 updateBasketCount();
             });
-            item.appendChild(minusCell);
+            itemRow.appendChild(minusCell);
 
-            document.getElementById("items-in-basket").appendChild(item);
+            itemsInBasket.appendChild(itemRow);
         }
-        updateBasketCount();
-        createNotification("Item zum Warenkorb hinzugefügt.");
+
     } else {
         createNotification("Kann nicht hinzugefügt werden!");
+        flashBasket("red");
     }
 }
 
 function updateBasketCount() {
     var count = 0;
-    var quantities = document.querySelectorAll(".item-count");
-    for (var i = 0; i < quantities.length; i++) {
-        count += parseInt(quantities[i].textContent);
+    for (var key in basketItems) {
+        count += basketItems[key].quantity;
     }
-    basketCount.textContent = count; // Update the basket count element
+    basketCount.textContent = count;
 }
 
 function isInProducts(name, desc) {
@@ -165,6 +166,14 @@ function isInProducts(name, desc) {
 }
 function findEntry(name, desc) {
     return products.find(p => p.name === name && p.description === desc);
+}
+
+function flashBasket(color) {
+    // Visual effect
+    basketBtn.classList.add(`${color}-flash`);
+    setTimeout(function () {
+        basketBtn.classList.remove(`${color}-flash`);
+    }, 500);
 }
 
 function createNotification(textContent) {

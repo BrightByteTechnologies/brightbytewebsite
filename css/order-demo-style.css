@@ -289,17 +289,25 @@ input[type="submit"] {
   font-size: 20px;
 }
 
-.flash {
+.red-flash {
+  --flash-color: red;
+  animation: flash .5s ease;
+}
+
+.white-flash {
+  --flash-color: #608299;
   animation: flash .5s ease;
 }
 
 @keyframes flash {
   from {
     filter: brightness(200%);
+    background-color: var(--flash-color);
   }
 
   to {
     filter: brightness(100%);
+    background-color: #608299;
   }
 }
 
