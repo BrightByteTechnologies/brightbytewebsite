@@ -9,10 +9,10 @@ var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
 //JSON string
-var productsString = '[{"name":"Cola","description":"Original Cola"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmak"},{"name":"Fanta","description":"Original Fanta"},{"name":"Fanta Mango","description":"Fanta Mango-Style"},{"name":"Fanta","description":"Original Fanta"},{"name":"Sprite","description":"Original Sprite"},{"name":"Monster Energy","description":"Original Monster Energy"}]';
+var productsString = '[{"name":"Cola","description":"Original Cola","totalPrice":"1,23","hashCode":"aoidhas089s8S"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmak","totalPrice":"1,23","hashCode":"a9aSpAsd0aASp"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"IOklasjdfo01edf"},{"name":"Fanta Mango","description":"Fanta Mango-Style","totalPrice":"1,23","hashCode":"SksoSApoif0124"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"8aDia021oSF"},{"name":"Sprite","description":"Original Sprite","totalPrice":"1,23","hashCode":"Ldja901JHd0a"},{"name":"Monster Energy","description":"Original Monster Energy","totalPrice":"1,23","hashCode":"AdopaD0I2mv"}]';
 
 // Convert the JSON string to a JavaScript object
-var products = JSON.parse(jsonString);
+var products = JSON.parse(productsString);
 var basketItems = {};
 
 function order() {
@@ -77,7 +77,8 @@ function openBasket() {
 
 function updateBasket(itemName, itemDesc, itemAmount) {
     if (isInProducts(itemName, itemDesc)) {
-        var itemPrice = findEntry(itemName, itemDesc)["totalPrice"];
+        var item = findEntry(itemName, itemDesc);
+        var itemPrice = item["totalPrice"];
         var parsedPrice = parseFloat(itemPrice.replace(',', '.'));
 
         var basketName = `${DOMPurify.sanitize(itemName)} | ${DOMPurify.sanitize(itemDesc)}`;
@@ -98,7 +99,8 @@ function updateBasket(itemName, itemDesc, itemAmount) {
                 description: itemDesc,
                 price: parsedPrice,
                 quantity: itemAmount,
-                totalPrice: parsedPrice * itemAmount
+                totalPrice: parsedPrice * itemAmount,
+                hashCode: item["hashCode"]
             };
         }
 
@@ -112,35 +114,41 @@ function updateBasket(itemName, itemDesc, itemAmount) {
         for (var key in basketItems) {
             var item = basketItems[key];
             var itemRow = document.createElement("tr");
-
+            itemRow.setAttribute("id", item.hashCode);
+          
             var itemNameCell = document.createElement("td");
             itemNameCell.textContent = item.name + " | " + item.description;
             itemRow.appendChild(itemNameCell);
-
+          
             var itemQuantityCell = document.createElement("td");
             itemQuantityCell.textContent = item.quantity;
             itemRow.appendChild(itemQuantityCell);
-
+          
             var itemPriceCell = document.createElement("td");
             itemPriceCell.textContent = item.price;
             itemRow.appendChild(itemPriceCell);
-
+          
             var itemTotalPriceCell = document.createElement("td");
             itemTotalPriceCell.textContent = item.totalPrice;
             itemRow.appendChild(itemTotalPriceCell);
-
+          
             // Create the button to remove item
             var minusCell = document.createElement("button");
             minusCell.textContent = "✖";
-            minusCell.setAttribute("id", "minusBtn");
-            minusCell.addEventListener("click", function () {
+            minusCell.setAttribute("class", "minusBtn");
+          
+            // Create a closure around the event listener function to capture the current value of key
+            minusCell.addEventListener("click", (function(key, itemRow) {
+              return function () {
                 itemRow.remove();
+                delete basketItems[key];
                 updateBasketCount();
-            });
+              }
+            })(key, itemRow));
             itemRow.appendChild(minusCell);
-
+          
             itemsInBasket.appendChild(itemRow);
-        }
+          }
 
     } else {
         createNotification("Kann nicht hinzugefügt werden!");
@@ -232,9 +240,9 @@ function resetConfirmation() {
 }
 
 function resetBasket() {
-    var items = document.querySelectorAll("#items-in-basket tr");
-    for (var i = 0; i < items.length; i++) {
-        items[i].remove();
+    for (var key in basketItems) {
+        document.getElementById(basketItems[key].hashCode).remove();
+        delete basketItems[key];
     }
     updateBasketCount();
 }
