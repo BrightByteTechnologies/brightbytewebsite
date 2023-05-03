@@ -40,15 +40,9 @@ $profilesList = createList($responseData);
         </section>
 
         <h1 class="text-center display-1">Lernen Sie unser Hardware-Team kennen</h1>
-        <br><br>
-
-
-
-
-
 
         <div class="flow">
-            <h3 class="text-center" style="padding-left: 200px; padding-right: 90px;">Unser Hardwareteam - Ihr Partner
+            <h3 class="text-center">Unser Hardwareteam - Ihr Partner
                 für Technologie und Entwicklung.</h3>
 
             <div class="team">

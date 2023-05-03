@@ -2,8 +2,8 @@
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'management.php';
 
-require_once("includes/functions/apiRequest.php");
-require_once("includes/functions/createProfilesList.php");
+require_once("includes/functions/api/apiRequest.php");
+require_once("includes/functions/api/createProfilesList.php");
 $endpoint = 'api.brightbytetechnologies.de/management';
 $method = 'GET';
 $keyIndex = 0;
@@ -44,13 +44,8 @@ $profilesList = createList($responseData);
         <h1 class="text-center display-1">Lernen Sie unser Verwaltungs-Team kennen</h1>
         <br><br>
 
-
-
-
-
-
         <div class="flow">
-            <h3 class="text-center" style="padding-left: 200px; padding-right: 90px;">Unser Verwaltungsteam - engagiert,
+            <h3 class="text-center" >Unser Verwaltungsteam - engagiert,
                 kompetent und immer auf dem neuesten Stand.</h3>
 
             <div class="team">

@@ -39,12 +39,6 @@ $profilesList = createList($responseData);
     </section>
 
     <h1 class="text-center display-1">Lernen Sie unser Software-Team kennen</h1>
-    <br><br>
-
-
-
-
-
 
     <div class="flow">
       <h3 class="text-center">Lassen Sie sich von unserem Team von Softwareentwicklern inspirieren. Wir verwandeln Ihre Ideen in Realität.</h3>
