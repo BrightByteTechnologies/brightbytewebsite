@@ -2,7 +2,7 @@
 require_once("includes/functions/misc/getRelativPath.php");
 $currentFile = 'product.php';
 
-require_once("includes/functions/misc/api/apiRequest.php");
+require_once("includes/functions/api/apiRequest.php");
 $endpoint = 'api.brightbytetechnologies.de/timeline';
 $method = 'GET';
 $keyIndex = 0;

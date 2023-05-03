@@ -1,5 +1,6 @@
 body {
   background-color: var(--logocolor-light);
+  margin: 0;
 }
 
 .order-nav {
@@ -30,7 +31,7 @@ body {
   background-color: var(--logocolor-dark);
 }
 
-#basket {
+.basket {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -79,10 +80,6 @@ body {
   background-color: rgba(66, 66, 66, 0.5);
 }
 
-#basket.show {
-  display: block;
-}
-
 #basket-header h2 {
   display: flex;
   color: white;
@@ -121,7 +118,6 @@ body {
   color: white;
   font-size: 18px;
   cursor: pointer;
-  width: 50%;
   border-radius: 10px;
 }
 
@@ -130,8 +126,16 @@ body {
 }
 
 #reset-button,
-.reset input[type="submit"]:first-child {
+.reset input[type="submit"]:nth-child(2n) {
   background-color: red;
+}
+#resetSpan {
+  font-size: xx-large;
+  font-weight: bold;
+}
+.reset input{
+  width: 100% !important;
+  margin-top: 2% !important;
 }
 
 #pay-button:hover {
@@ -147,7 +151,7 @@ body {
 #basket-items th,
 #basket-items td,
 .in-basket,
-#minusBtn {
+.minusBtn {
   text-align: center;
   padding: 5px;
 }
@@ -164,7 +168,7 @@ body {
   height: 100%;
 }
 
-#minusBtn {
+.minusBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,11 +183,11 @@ body {
   height: 31px;
 }
 
-#minusBtn:active {
+.minusBtn:active {
   background-color: var(--logocolor-light);
 }
 
-#minusBtn:hover {
+.minusBtn:hover {
   color: red;
 }
 
@@ -285,17 +289,25 @@ input[type="submit"] {
   font-size: 20px;
 }
 
-.flash {
+.red-flash {
+  --flash-color: red;
+  animation: flash .5s ease;
+}
+
+.white-flash {
+  --flash-color: #608299;
   animation: flash .5s ease;
 }
 
 @keyframes flash {
   from {
     filter: brightness(200%);
+    background-color: var(--flash-color);
   }
 
   to {
     filter: brightness(100%);
+    background-color: #608299;
   }
 }
 

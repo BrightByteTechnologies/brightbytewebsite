@@ -10,10 +10,11 @@ body {
 
 #company-logo {
     background-color: var(--logocolor);
-    height: 80px;
+    height: 4rem;
     width: auto !important;
     position: relative;
     margin-bottom: 10px;
+    margin-right: 1%;
     align-items: center;
 }
 
