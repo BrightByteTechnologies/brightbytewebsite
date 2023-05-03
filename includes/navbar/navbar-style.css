@@ -105,7 +105,7 @@ body {
 #dropdown-content {
     display: none;
     position: absolute;
-    top: 90%;
+    top: 125%;
     left: 0;
     z-index: 1;
     background-color: var(--logocolor-dark);
