@@ -257,22 +257,18 @@ a.profile {
   transform: scale(1.05) rotate(1deg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Small screens */
 @media only screen and (max-width: 600px) {
 
+  h1 {
+    top: 21.5%;
+    width: 340px;
+  }
+
+  h3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
   /* Styles for small screens */
   div.main {
     font-size: 20px;
