@@ -19,8 +19,7 @@ $profilesList = createList($responseData);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hardware</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
@@ -35,24 +34,19 @@ $profilesList = createList($responseData);
 <body>
     <?php include('includes/navbar/navbar.php') ?>
     <div class="main">
-        <section class="d-flex justify-content-center align-items-center softGIF">
-            <img class="d-block" src="https://cdn.row-hosting.de/BBT/Gifs/software.gif">
-        </section>
 
-        <h1 class="text-center display-1">Lernen Sie unser Hardware-Team kennen</h1>
-        <br><br>
-
-
-
-
+        <div class="d-flex justify-content-center align-items-center pictures">
+            <img class="softGIF" src="https://cdn.row-hosting.de/BBT/Gifs/software.gif">
+            <h1 class="text-center display-1">Lernen Sie unser Hardware-Team kennen</h1>
+        </div>
 
 
         <div class="flow">
-            <h3 class="text-center" style="padding-left: 200px; padding-right: 90px;">Unser Hardwareteam - Ihr Partner
+            <h3 class="text-center">Unser Hardwareteam - Ihr Partner
                 für Technologie und Entwicklung.</h3>
-
+                <br>
             <div class="team">
-                    <?php echo $profilesList; ?>
+                <?php echo $profilesList; ?>
             </div>
         </div>
         <h2 class="text-center"><q>Innovative Hardware-Technologie für Ihren Erfolg.</q></h2>

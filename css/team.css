@@ -11,18 +11,12 @@ body {
   overflow-x: hidden;
 }
 
-.d-block {
-  width: 80%;
-  height: auto;
-}
-
-
 h1 {
   position: absolute;
   color: #fff;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 80px;
-  top: 60%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: #fff;
@@ -57,11 +51,8 @@ p {
 h3 {
   font-weight: bolder;
   font-size: 2.7rem;
-  display: flex;
   color: #526979;
   font-family: 'Times New Roman', Times, serif;
-  padding-left: 50px;
-  padding-right: 50px;
   text-shadow: none;
 }
 
@@ -77,11 +68,19 @@ ul {
   background: linear-gradient(180deg, var(--logocolor) 0%, rgba(255, 255, 255) 100%);
 }
 
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .softGIF {
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: .7;
+  width: 80%;
+  height: auto;
 }
 
 .para {
@@ -99,11 +98,13 @@ ul {
   grid-gap: var(--auto-grid-gap, 0);
   padding: 0;
   max-width: 100%;
-  
+
 }
+
 .auto-grid li {
   margin-top: 2%;
 }
+
 .auto-grid li:nth-child(3n + 1) {
   margin-right: 2.5%;
 }
@@ -257,19 +258,6 @@ a.profile {
   transform: scale(1.05) rotate(1deg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Small screens */
 @media only screen and (max-width: 600px) {
 
@@ -277,6 +265,29 @@ a.profile {
   div.main {
     font-size: 20px;
   }
+
+  h1 {
+    position: relative;
+    top: -28%;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .softGIF {
+    width: 100%;
+    margin-top: 15%;
+  }
+
+  .pictures {
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+  }
+
 }
 
 /* Medium screens */
@@ -298,14 +309,14 @@ a.profile {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  div.main {
     font-size: 10px;
   }
 }
 
 /* adjust font size for even smaller screens */
 @media screen and (max-width: 480px) {
-  body {
+  div.main {
     font-size: 8px;
   }
 }

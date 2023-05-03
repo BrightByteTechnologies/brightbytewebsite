@@ -18,7 +18,7 @@ body {
 }
 
 #company-name {
-    font-size: 30px;
+    font-size: 30px !important;
     white-space: nowrap;
     text-decoration: none;
     text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.2em var(--logocolor-light);
@@ -180,7 +180,7 @@ body {
     }
 
     #company-name {
-        font-size: 125%;
+        font-size: 125% !important;
         text-align: center;
         white-space: nowrap;
         text-decoration: none;
@@ -215,7 +215,7 @@ body {
     }
 
     #sidenav-container span {
-        font-size: larger;
+        font-size: larger !important;
         margin-left: 10%;
         background-color: var(--logocolor-light);
         border-radius: 10px;
@@ -252,13 +252,13 @@ body {
     #openbtn {
         display: block;
         text-align: center;
-        font-size: 100px;
+        font-size: 100px !important;
     }
 
     #closebtn {
         display: block;
         text-align: center;
-        font-size: 25px;
+        font-size: 25px !important;
     }
 
     #dropdown-content {
