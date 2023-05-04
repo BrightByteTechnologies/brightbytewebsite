@@ -56,13 +56,13 @@ $currentFile = 'index.php';
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="pictures/bot01.jpg" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="pictures/bot02.jpg" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="pictures/bot03.jpg" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"

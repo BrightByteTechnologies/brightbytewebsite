@@ -129,7 +129,7 @@ button:hover {
 #mini {
     font-size: small;
     color: var(--logocolor-light);
-    text-shadow: 6px 6px 4px black;
+    text-shadow: 6px 6px 7px black;
     margin: 0;
     padding: 0;
     opacity: 80%;
@@ -138,7 +138,9 @@ button:hover {
 
 #bbpic {
     width: max-content;
+    max-width: 400px;
     height: max-content;
+    max-height: 400px;
     margin-left: 1%;
     padding: auto;
 }

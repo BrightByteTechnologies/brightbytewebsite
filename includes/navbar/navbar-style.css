@@ -1,6 +1,5 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
 }
 
 body {
@@ -36,6 +35,7 @@ body {
 }
 
 #navbar {
+    user-select: none;
     height: 100px;
     background-color: var(--logocolor);
     align-items: center;
