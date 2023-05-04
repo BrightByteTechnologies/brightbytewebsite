@@ -8,7 +8,8 @@ $currentFile = 'legalNotice.php';
     <title>BrightByte Technologies - Impressum</title>
         <style>
             @import url("css/root.css");
-            body {background-color: var(--logocolor-light);}
+            body {background-color: var(--logocolor);}
+            h1, h2, p{color: #fff;}
         </style>
     </head>
     <body>
