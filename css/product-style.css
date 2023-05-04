@@ -282,10 +282,8 @@ button:hover {
     opacity: 1;
 }
 
-/*hovering div move whole contect*/
-.timeline:hover .tl-content {
-    top: 5%;
-}
+/*hovering div move whole content*/
+
 
 .hidden {
     display: none;
@@ -315,8 +313,8 @@ button:hover {
     width: 25%;
     height: 25%;
     position: relative;
-    top: -40;
-    left: -60;
+    top: -50px;
+    left: -120px;
 }
 
 .tl-content {
@@ -325,6 +323,15 @@ button:hover {
     height: fit-content;
     text-align: center;
     transition: all .4s ease;
+}
+
+.tl-title {
+    position: relative;
+    top: -135px;
+}
+
+.tl-title h2{
+    color: #234c5c;
 }
 
 .tl-text {
@@ -458,21 +465,15 @@ button:hover {
         max-height: 450px;
     }
 
-    .tl-bg {
-        filter: grayscale(100%) blur(2px) brightness(40%);
+    .tl-img-panel, .tl-title {
+        left: 20px;
     }
 
     .timeline-box {
         padding-bottom: 25%;
     }
 
-    .tl-content,
-    .tl-content:hover {
-        top: 0;
-    }
-
-    .tl-text {
+    .timeline:hover .tl-text {
         opacity: 1;
     }
-
 }

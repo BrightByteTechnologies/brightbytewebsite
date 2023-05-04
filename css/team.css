@@ -88,10 +88,10 @@ ul {
 
 .para {
   max-width: 60ch;
-  color: white;
+  color: darkgrey;
+  text-shadow: -2px -2px 0 black,-2px -1px 0 black,-2px 0px 0 black,-2px 1px 0 black,-2px 2px 0 black,-1px -2px 0 black,-1px -1px 0 black,-1px 0px 0 black,-1px 1px 0 black,-1px 2px 0 black,0px -2px 0 black,0px -1px 0 black,0px 0px 0 black,0px 1px 0 black,0px 2px 0 black,1px -2px 0 black,1px -1px 0 black,1px 0px 0 black,1px 1px 0 black,1px 2px 0 black,2px -2px 0 black,2px -1px 0 black,2px 0px 0 black,2px 1px 0 black,2px 2px 0 black;
   display: block;
 }
-
 
 /* Utilities */
 .auto-grid {
@@ -146,6 +146,7 @@ a.profile {
   color: #ffffff;
   backface-visibility: hidden;
   text-decoration: none;
+  text-shadow: none;
   overflow: hidden;
 }
 
@@ -215,7 +216,7 @@ a.profile {
   line-height: 1.2;
   font-weight: 900;
   letter-spacing: 0.03ch;
-  color: white;
+  color:black;
   transition: 300ms transform ease;
 }
 
