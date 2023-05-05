@@ -41,6 +41,7 @@ $currentFile = 'order-demo.php';
                     <thead>
                         <tr>
                             <th>Item</th>
+                            <th>Beschreibung</th>
                             <th>Menge</th>
                             <th>Preis</th>
                             <th>Gesamt</th>
@@ -51,8 +52,8 @@ $currentFile = 'order-demo.php';
                     </tbody>
                 </table>
                 <div id="basket-footer">
-                    <button id="pay-button">Bezahlen</button>
-                    <button id="reset-button">Entfernen</button>
+                    <button class="basket-buttons" id="pay-button">Bestellen</button>
+                    <button class="basket-buttons" id="reset-button">Leeren</button>
                 </div>
             </div>
         </div>
@@ -71,7 +72,7 @@ $currentFile = 'order-demo.php';
                 <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="item-image">
             </div>
             <div class="content-bottom">
-                <p class="item-info"><span class='item-name'>Cola Vanille</span> <br> <span class='item-description'>Cola mit Vanillegeschmak</span> <br><b class='item-price'>1.23</b> €
+                <p class="item-info"><span class='item-name'>Cola Vanille</span> <br> <span class='item-description'>Cola mit Vanillegeschmack</span> <br><b class='item-price'>1.23</b> €
                 </p>
             </div>
         </div>

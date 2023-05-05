@@ -9,7 +9,7 @@ var basketCount = document.getElementById("basketCount");
 var removeBtn = document.getElementsByClassName("minusBtn");
 
 //JSON string
-var productsString = '[{"name":"Cola","description":"Original Cola","totalPrice":"1,23","hashCode":"aoidhas089s8S"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmak","totalPrice":"1,23","hashCode":"a9aSpAsd0aASp"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"IOklasjdfo01edf"},{"name":"Fanta Mango","description":"Fanta Mango-Style","totalPrice":"1,23","hashCode":"SksoSApoif0124"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"8aDia021oSF"},{"name":"Sprite","description":"Original Sprite","totalPrice":"1,23","hashCode":"Ldja901JHd0a"},{"name":"Monster Energy","description":"Original Monster Energy","totalPrice":"1,23","hashCode":"AdopaD0I2mv"}]';
+var productsString = '[{"name":"Cola","description":"Original Cola","totalPrice":"1,23","hashCode":"aoidhas089s8S"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmack","totalPrice":"1,23","hashCode":"a9aSpAsd0aASp"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"IOklasjdfo01edf"},{"name":"Fanta Mango","description":"Fanta Mango-Style","totalPrice":"1,23","hashCode":"SksoSApoif0124"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"8aDia021oSF"},{"name":"Sprite","description":"Original Sprite","totalPrice":"1,23","hashCode":"Ldja901JHd0a"},{"name":"Monster Energy","description":"Original Monster Energy","totalPrice":"1,23","hashCode":"AdopaD0I2mv"}]';
 
 // Convert the JSON string to a JavaScript object
 var products = JSON.parse(productsString);
@@ -44,6 +44,7 @@ function order() {
     amountSub = document.createElement("input");
     amountSub.setAttribute("value", "In den Warenkorb");
     amountSub.setAttribute("type", "submit");
+    amountSub.setAttribute("id", "amountSubmit");
 
     amountSub.addEventListener("click", function () {
         // Get selected amount and update basket
@@ -117,8 +118,12 @@ function updateBasket(itemName, itemDesc, itemAmount) {
             itemRow.setAttribute("id", item.hashCode);
           
             var itemNameCell = document.createElement("td");
-            itemNameCell.textContent = item.name + " | " + item.description;
+            itemNameCell.textContent = item.name;
             itemRow.appendChild(itemNameCell);
+
+            var itemDescCell = document.createElement("td");
+            itemDescCell.textContent = item.description;
+            itemRow.appendChild(itemDescCell);
           
             var itemQuantityCell = document.createElement("td");
             itemQuantityCell.textContent = item.quantity;

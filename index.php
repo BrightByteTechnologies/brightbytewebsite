@@ -18,14 +18,13 @@ $currentFile = 'index.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
+    <link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
     <!-- Custom CSS -->
     <style>
-    @import url("css/root.css");
-    @import url("css/style.css");
+        @import url("css/root.css");
+        @import url("css/style.css");
     </style>
 </head>
-
 
 <body>
     <?php include('includes/navbar/navbar.php') ?>
@@ -56,13 +55,16 @@ $currentFile = 'index.php';
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                                class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                                class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png" class="d-block w-100 h-100 rounded" alt="...">
+                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                                class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -101,11 +103,10 @@ $currentFile = 'index.php';
             <div class="row">
                 <h1 class="text-center">Über Uns</h1>
                 <div class="col-sm">
-                    <img src="https://cdn.row-hosting.de/BBT/Website/bb-logo-removebg.png" class="d-block mx-auto text-center img-thumbnail"
-                        alt="BevBot LOGO">
+                    <img src="https://cdn.row-hosting.de/BBT/Website/bb-logo-removebg.png"
+                        class="d-block mx-auto text-center img-thumbnail" alt="BevBot LOGO">
                 </div>
-                
-                
+
                 <div class="col-sm">
                     <div class="d-inline">
                         <h2 class="text-center">BrightByte Technologies</h2>
@@ -126,24 +127,20 @@ $currentFile = 'index.php';
                 </div>
             </div>
         </div>
-
-
     </div>
     </div>
 
     </div>
-
-
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
