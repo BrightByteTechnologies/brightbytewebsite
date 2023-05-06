@@ -51,7 +51,6 @@ button:hover {
     width: auto;
     height: 100%;
     padding-top: 10%;
-    padding-bottom: 5%;
     align-items: center;
     justify-content: center;
 }
@@ -80,13 +79,16 @@ button:hover {
 .bb-des {
     display: flex;
     align-items: center;
-    border-bottom: #234c5c 1px dashed;
-    margin-left: 15%;
-    margin-right: 15%;
+    border: 10px#234c5c solid;
+    margin: 20px;
+    margin-right: 180px;
+    margin-left: 180px;
+    padding: 20px;
+    background-color: #617d99;
 }
 
-.bb-des:last-child {
-    border-bottom: none;
+.bb-des p, .des-detail{
+    text-shadow: 5px 5px 4px #234c5c;
 }
 
 .des-detail {
@@ -283,6 +285,24 @@ button:hover {
 }
 
 /*hovering div move whole content*/
+.timeline:hover .tl-img-panel,
+.timeline:hover .tl-title {
+  transition: transform 0.3s ease;
+}
+
+.timeline:hover .tl-img-panel {
+  transform: translate(30%, 25%);
+}
+
+.timeline:hover .tl-title {
+  transform: translate(0%, 287%);
+}
+
+.timeline:not(:hover) .tl-img-panel,
+.timeline:not(:hover) .tl-title {
+  transform: translate(0, 0);
+  transition: transform 0.3s ease;
+}
 
 
 .hidden {
@@ -300,6 +320,7 @@ button:hover {
     transition: all .4s;
     z-index: 0;
     filter: grayscale(0%);
+    border-radius: .5rem;
 }
 
 .tl-img-panel {
@@ -453,6 +474,7 @@ button:hover {
 
     .bb-des {
         display: block;
+        margin: 5px;
     }
 
     .bb-des:last-child br {

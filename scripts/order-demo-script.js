@@ -116,7 +116,7 @@ function updateBasket(itemName, itemDesc, itemAmount) {
             var item = basketItems[key];
             var itemRow = document.createElement("tr");
             itemRow.setAttribute("id", item.hashCode);
-          
+
             var itemNameCell = document.createElement("td");
             itemNameCell.textContent = item.name;
             itemRow.appendChild(itemNameCell);
@@ -124,36 +124,36 @@ function updateBasket(itemName, itemDesc, itemAmount) {
             var itemDescCell = document.createElement("td");
             itemDescCell.textContent = item.description;
             itemRow.appendChild(itemDescCell);
-          
+
             var itemQuantityCell = document.createElement("td");
             itemQuantityCell.textContent = item.quantity;
             itemRow.appendChild(itemQuantityCell);
-          
+
             var itemPriceCell = document.createElement("td");
             itemPriceCell.textContent = item.price;
             itemRow.appendChild(itemPriceCell);
-          
+
             var itemTotalPriceCell = document.createElement("td");
             itemTotalPriceCell.textContent = item.totalPrice;
             itemRow.appendChild(itemTotalPriceCell);
-          
+
             // Create the button to remove item
             var minusCell = document.createElement("button");
             minusCell.textContent = "✖";
             minusCell.setAttribute("class", "minusBtn");
-          
+
             // Create a closure around the event listener function to capture the current value of key
-            minusCell.addEventListener("click", (function(key, itemRow) {
-              return function () {
-                itemRow.remove();
-                delete basketItems[key];
-                updateBasketCount();
-              }
+            minusCell.addEventListener("click", (function (key, itemRow) {
+                return function () {
+                    itemRow.remove();
+                    delete basketItems[key];
+                    updateBasketCount();
+                }
             })(key, itemRow));
             itemRow.appendChild(minusCell);
-          
+
             itemsInBasket.appendChild(itemRow);
-          }
+        }
 
     } else {
         createNotification("Kann nicht hinzugefügt werden!");
@@ -282,3 +282,6 @@ basketClose.addEventListener("click", function () {
     // Close basket
     closeElement();
 });
+
+const items = document.querySelectorAll('.product-item');
+

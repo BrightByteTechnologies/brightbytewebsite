@@ -10,6 +10,7 @@
 .context {
   overflow: hidden;
   position: relative;
+  border-radius: 2.5rem;
 }
 
 .pink {
@@ -38,7 +39,7 @@
 }
 
 .context:hover .overlay {
-  opacity: 0.6;
+  opacity: 0.35;
   cursor: pointer;
 }
 
@@ -52,6 +53,7 @@ h2 {
 
 .image {
   margin-top: 89px;
+
 }
 
 img {
@@ -64,6 +66,7 @@ img {
   max-width: 50%;
   max-height: 85%;
   float: left;
+  border: 2.5px double burlywood;
 }
 
 .text {
@@ -76,18 +79,21 @@ img {
 .text2 {
   padding-left: 49%;
   position: relative;
-  bottom: 170%
+  bottom: 165% !important;
 }
 
+.text2 p, h3 {
+  border-radius: .5rem;
+}
 
 .text2 p,
 .para {
   font-size: large;
   font-style: italic;
   border: 1px solid aliceblue;
-padding: 8px;
- background: ivory;
- color: black;
+  padding: 8px;
+  background: ivory;
+  color: black;
 }
 
 .para {
@@ -105,10 +111,11 @@ h3 {
   color: lavender;
 }
 
-.content {
+.content, .content img {
   background-color: white;
   padding: 10px;
   margin-bottom: 25px;
+  border-radius: 2.5rem;
 }
 
 h4 {
@@ -121,6 +128,30 @@ h4 {
 .text>div {
   display: table-cell;
   vertical-align: middle;
+}
+
+.col-md-12:last-child {
+  height: 0;
+}
+
+@media (max-width: 800px) {
+
+  .content {
+    width: 95%;
+  }
+
+  .context {
+    margin: 10px;
+  }
+
+  .text2 {
+    bottom: 265% !important;
+  }
+
+  .image {
+    margin-top: 10px;
+    height: 90% !important;
+  }
 }
 
 @media (max-width: 575.98px) {

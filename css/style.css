@@ -23,6 +23,10 @@ p {
     width: 100%;
 }
 
+.carousel-inner {
+    border-radius: 1.5rem;
+}
+
 .bi-sun {
     color: white;
 }
@@ -42,8 +46,6 @@ p {
 .card p {
     color: var(--logocolor-light);
 }
-
-#bot-text {}
 
 #friends {
     padding-top: 5%;
