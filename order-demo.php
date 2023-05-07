@@ -28,7 +28,6 @@ $currentFile = 'order-demo.php';
         </div>
         <div class="order-basket">
             <button id="basketBtn">
-                Warenkorb
                 <span id="basketCount">0</span>
             </button>
             <div id="basket-overlay"></div>

@@ -6,7 +6,6 @@ var payButton = document.getElementById("pay-button");
 var resetButton = document.getElementById("reset-button");
 var overlay = document.getElementById("basket-overlay");
 var basketCount = document.getElementById("basketCount");
-var removeBtn = document.getElementsByClassName("minusBtn");
 
 //JSON string
 var productsString = '[{"name":"Cola","description":"Original Cola","totalPrice":"1,23","hashCode":"aoidhas089s8S"},{"name":"Cola Vanille","description":"Cola mit Vanillegeschmack","totalPrice":"1,23","hashCode":"a9aSpAsd0aASp"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"IOklasjdfo01edf"},{"name":"Fanta Mango","description":"Fanta Mango-Style","totalPrice":"1,23","hashCode":"SksoSApoif0124"},{"name":"Fanta","description":"Original Fanta","totalPrice":"1,23","hashCode":"8aDia021oSF"},{"name":"Sprite","description":"Original Sprite","totalPrice":"1,23","hashCode":"Ldja901JHd0a"},{"name":"Monster Energy","description":"Original Monster Energy","totalPrice":"1,23","hashCode":"AdopaD0I2mv"}]';
@@ -116,7 +115,7 @@ function updateBasket(itemName, itemDesc, itemAmount) {
             var item = basketItems[key];
             var itemRow = document.createElement("tr");
             itemRow.setAttribute("id", item.hashCode);
-
+          
             var itemNameCell = document.createElement("td");
             itemNameCell.textContent = item.name;
             itemRow.appendChild(itemNameCell);
@@ -124,36 +123,36 @@ function updateBasket(itemName, itemDesc, itemAmount) {
             var itemDescCell = document.createElement("td");
             itemDescCell.textContent = item.description;
             itemRow.appendChild(itemDescCell);
-
+          
             var itemQuantityCell = document.createElement("td");
             itemQuantityCell.textContent = item.quantity;
             itemRow.appendChild(itemQuantityCell);
-
+          
             var itemPriceCell = document.createElement("td");
             itemPriceCell.textContent = item.price;
             itemRow.appendChild(itemPriceCell);
-
+          
             var itemTotalPriceCell = document.createElement("td");
             itemTotalPriceCell.textContent = item.totalPrice;
             itemRow.appendChild(itemTotalPriceCell);
-
+          
             // Create the button to remove item
             var minusCell = document.createElement("button");
             minusCell.textContent = "✖";
             minusCell.setAttribute("class", "minusBtn");
-
+          
             // Create a closure around the event listener function to capture the current value of key
-            minusCell.addEventListener("click", (function (key, itemRow) {
-                return function () {
-                    itemRow.remove();
-                    delete basketItems[key];
-                    updateBasketCount();
-                }
+            minusCell.addEventListener("click", (function(key, itemRow) {
+              return function () {
+                itemRow.remove();
+                delete basketItems[key];
+                updateBasketCount();
+              }
             })(key, itemRow));
             itemRow.appendChild(minusCell);
-
+          
             itemsInBasket.appendChild(itemRow);
-        }
+          }
 
     } else {
         createNotification("Kann nicht hinzugefügt werden!");
@@ -282,6 +281,3 @@ basketClose.addEventListener("click", function () {
     // Close basket
     closeElement();
 });
-
-const items = document.querySelectorAll('.product-item');
-
