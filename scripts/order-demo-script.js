@@ -50,7 +50,7 @@ function order() {
         var itemAmount = parseInt(document.getElementById("itemAmount").value);
         if (itemAmount > 0 && itemAmount != NaN) {
             if (parseInt(basketCount.textContent) + itemAmount > 20) {
-                closeAmountSelection(amountSele);
+                closeElement();
                 alert("Maximal 20 Getränke pro Person!");
                 return;
             }

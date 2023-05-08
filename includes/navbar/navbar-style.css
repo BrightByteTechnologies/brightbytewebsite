@@ -170,6 +170,7 @@ body {
 
     #nav-up {
         height: 100%;
+        font-size: 18px;
     }
 
     #company-logo {
@@ -241,6 +242,7 @@ body {
         height: auto;
         width: 0;
         background-color: var(--logocolor-light);
+        font-size: 23px;
     }
 
     #sidenav a,

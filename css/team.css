@@ -220,6 +220,7 @@ a.profile {
   font-weight: 900;
   letter-spacing: 0.03ch;
   color:black;
+  text-shadow: -2px -2px 0 gray,-2px -1px 0 gray,-2px 0px 0 gray,-2px 1px 0 gray,-2px 2px 0 gray,-1px -2px 0 gray,-1px -1px 0 gray,-1px 0px 0 gray,-1px 1px 0 gray,-1px 2px 0 gray,0px -2px 0 gray,0px -1px 0 gray,0px 0px 0 gray,0px 1px 0 gray,0px 2px 0 gray,1px -2px 0 gray,1px -1px 0 gray,1px 0px 0 gray,1px 1px 0 gray,1px 2px 0 gray,2px -2px 0 gray,2px -1px 0 gray,2px 0px 0 gray,2px 1px 0 gray,2px 2px 0 gray;
   transition: 300ms transform ease;
 }
 
@@ -263,13 +264,23 @@ a.profile {
   transform: scale(1.05) rotate(1deg);
 }
 
+@media only screen and (max-width: 1220px) {
+  h1 {
+    top: -210px;
+    width: 975px;
+    height: 190px;
+    border-radius: 1.5rem;
+  }
+}
+
 /* Small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
   h1 {
-    top: -33px;
+    top: -35px;
     width: 331px;
-    height: 185px;
+    height: 190px;
+    border-radius: 1.5rem;
   }
 
   h3 {
@@ -280,10 +291,22 @@ a.profile {
   div.main {
     font-size: 20px;
   }
+
+  .auto-grid li{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
 }
 
 /* Medium screens */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
+
+  h1 {
+    top: -35px;
+    width: 331px;
+    height: 190px;
+    border-radius: 1.5rem;
+  }
 
   /* Styles for medium screens */
   div.main {
@@ -291,16 +314,15 @@ a.profile {
   }
 }
 
-/* Large screens */
-@media only screen and (min-width: 993px) {
-
-  /* Styles for large screens */
-  div.main {
-    font-size: 44px;
-  }
-}
-
 @media screen and (max-width: 768px) {
+
+  h1 {
+    top: -35px;
+    width: 331px;
+    height: 190px;
+    border-radius: 1.5rem;
+  }
+
   body {
     font-size: 10px;
   }
@@ -308,7 +330,36 @@ a.profile {
 
 /* adjust font size for even smaller screens */
 @media screen and (max-width: 480px) {
+
+  h1 {
+    top: -35px;
+    width: 330px;
+    height: 190px;
+    border-radius: 1.5rem;
+    font-size: 47px !important;
+  }
+
   body {
     font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  h1 {
+    top: -26px;
+    width: 298px;
+    height: 172px;
+    border-radius: 1.5rem;
+    font-size: 37px !important;
+  }
+
+  body {
+    font-size: 8px;
+  }
+
+  .auto-grid li{
+    margin-right: 1.5% !important;
+    margin-left: 1.5% !important;
   }
 }
