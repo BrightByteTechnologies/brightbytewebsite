@@ -245,16 +245,7 @@ body {
         font-size: 23px;
     }
 
-    #sidenav a,
-    #sidenav:visited a {
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        height: auto;
-        color: white;
-        text-align: left;
-    }
-
+    
     #openbtn {
         display: block;
         text-align: center;
@@ -265,6 +256,17 @@ body {
         display: block;
         text-align: center;
         font-size: 25px;
+    }
+    
+    #sidenav a,
+    #sidenav:visited a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        color: white;
+        text-align: left;
+        font-size: 20px;
     }
 
     #dropdown-content {
