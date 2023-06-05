@@ -5,7 +5,7 @@ fetch('includes/product-info.json')
     document.getElementById('bevWhy').textContent = data.Why.description[0].detail;
 
     const benefitDiv = document.getElementById('benefit');
-    for(let i = 0; i < data.Why.description[1].detail.length; i++) {
+    for (let i = 0; i < data.Why.description[1].detail.length; i++) {
       const name = data.Why.description[1].detail[i].name;
       const description = data.Why.description[1].detail[i].description;
 
@@ -19,7 +19,7 @@ fetch('includes/product-info.json')
       benefitDiv.appendChild(nameSpan);
       benefitDiv.appendChild(descSpan);
     }
-    
+
 
   })
   .catch(error => {
@@ -95,7 +95,11 @@ function showCurrentSlide(index) {
     shownCollection[currentSlideIndex].style.display = "block";
   } else {
     for (let i = 0; i < getSlideSize(); i++) {
-      shownCollection[currentSlideIndex + i].style.display = "block";
+      var currentSlide = shownCollection[currentSlideIndex + i];
+      if (currentSlide !== null) {
+        currentSlide.style.display = "block";
+      }
+
     }
   }
 }

@@ -55,7 +55,7 @@ $currentFile = 'index.php';
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                            <img src="https://cdn.row-hosting.de/BBT/Teams/group.jpg"
                                                 class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
