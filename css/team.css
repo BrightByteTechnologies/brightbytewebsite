@@ -271,7 +271,6 @@ a.profile {
     top: -210px;
     width: 975px;
     height: 190px;
-    border-radius: 1.5rem;
   }
 }
 
@@ -282,7 +281,6 @@ a.profile {
     top: -35px;
     width: 331px;
     height: 190px;
-    border-radius: 1.5rem;
   }
 
   h3 {
@@ -307,7 +305,6 @@ a.profile {
     top: -35px;
     width: 331px;
     height: 190px;
-    border-radius: 1.5rem;
   }
 
   /* Styles for medium screens */
@@ -322,7 +319,6 @@ a.profile {
     top: -35px;
     width: 331px;
     height: 190px;
-    border-radius: 1.5rem;
   }
 
   body {
@@ -352,7 +348,6 @@ a.profile {
     top: -26px;
     width: 298px;
     height: 172px;
-    border-radius: 1.5rem;
     font-size: 37px !important;
   }
 
