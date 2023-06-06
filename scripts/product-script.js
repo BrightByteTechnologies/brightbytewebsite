@@ -92,13 +92,13 @@ function showCurrentSlide(index) {
   shownCollection.forEach((item) => (item.style.display = "none"));
 
   if (isMobile()) {
-    shownCollection[currentSlideIndex].style.display = "block";
+    shownCollection[currentSlideIndex].style.display = "flex";
   } else {
     for (let i = 0; i < getSlideSize(); i++) {
       var currentSlideIndexWithOffset = (currentSlideIndex + i) % shownCollection.length;
       var currentSlide = shownCollection[currentSlideIndexWithOffset];
       if (currentSlide) {
-        currentSlide.style.display = "block";
+        currentSlide.style.display = "flex";
       }
     }
   }

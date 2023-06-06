@@ -10,14 +10,14 @@ body {
 
 h1 {
     color: aliceblue;
-    text-shadow: 0 0 5px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
+    text-shadow: 0 0 2px #FFF, 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light), 0 0 12px var(--logocolor-light), 0 0 14px var(--logocolor-light), 0 0 16px var(--logocolor-light);
     letter-spacing: 1px;
     font-style: oblique;
 }
 
 h2 {
     color: aliceblue;
-    text-shadow: 0 0 5px #FFF, 0 0 40px var(--logocolor-light), 0 0 30px var(--logocolor-light);
+    text-shadow: 0 0 2px #FFF, 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light), 0 0 12px var(--logocolor-light), 0 0 14px var(--logocolor-light), 0 0 16px var(--logocolor-light);
     font-style: oblique;
 }
 
@@ -58,11 +58,11 @@ button:hover {
 .bevbotleft,
 .bevbotright {
     max-width: 100%;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
 .bevbotright {
-    padding-right: 0%;
+    padding-right: 2%;
 }
 
 #bbpic {
@@ -73,29 +73,22 @@ button:hover {
 
 .bb-why {
     margin-top: 8%;
-    border-left: none;
-    border-right: none;
     background: linear-gradient(180deg, rgba(97, 130, 153, 1) 0%, var(--logocolor) 90%, rgba(97, 130, 153, 1) 100%);
-}
-
-.bb-why h1 {
-    text-align: right;
-    padding-right: 5%;
 }
 
 .bb-des {
     display: flex;
     align-items: center;
+    border: 8px#183540 solid;
+    box-shadow: 0px 0px 0px 5px #234c5c;
     margin: 20px;
     margin-right: 180px;
     margin-left: 180px;
-    border: rgba(255, 255, 255, 0.1) dashed 2px;
     padding: 20px;
-    border-radius: var(--border-radius);
+    background-color: #617d99;
 }
 
-.bb-des p,
-.des-detail {
+.bb-des p, .des-detail{
     text-shadow: 5px 5px 4px #234c5c;
 }
 
@@ -120,17 +113,16 @@ button:hover {
 }
 
 #name {
-    font-size: 64px;
+    font-size: 90px;
     float: right;
     margin-bottom: 0;
 }
 
 #p1 {
-    font-size: 40px;
+    font-size: 50px;
     margin: 0;
     float: right;
     font-style: oblique;
-    text-shadow: 0 0 3px #FFF, 0 0 2px var(--logocolor);
 }
 
 #p1::first-letter {
@@ -138,9 +130,9 @@ button:hover {
 }
 
 #mini {
-    font-size: small;
+    font-size: 16px;
     color: var(--logocolor-light);
-    text-shadow: 1px 0 1px white, 0 0 30px var(--logocolor);
+    text-shadow: 6px 6px 7px black;
     margin: 0;
     padding: 0;
     opacity: 80%;
@@ -148,14 +140,9 @@ button:hover {
 }
 
 #bbpic {
-    width: max-content;
-    max-width: 600px;
-    min-width: 600px;
-    height: max-content;
-    max-height: 600px;
-    min-width: 600px;
-    margin-left: 1%;
-    padding: auto;
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
 }
 
 * {
@@ -277,8 +264,8 @@ button:hover {
 
 .timeline {
     position: relative;
-    width: 100%;
-    max-width: 500px;
+    justify-content: center;
+    width: 410px;
     height: 600px;
     margin-left: .5%;
     margin-right: .5%;
@@ -481,12 +468,8 @@ button:hover {
     }
 
     #bbpic {
-        width: 100%;
-        height: 100%;
-        max-width: 300px;
-        max-height: 300px;
-        min-width: 300px;
-        min-width: 300px;
+        width: 475px;
+        height: 475px;
         object-fit: cover;
     }
 

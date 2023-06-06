@@ -24,7 +24,7 @@ $profilesList = createList($responseData);
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+    <?php include 'includes/functions/misc/fonts.html'; ?>
     <style>
         @import url("css/root.css");
         @import url("css/style.css");
@@ -41,22 +41,18 @@ $profilesList = createList($responseData);
             <img class="d-block" src="https://cdn.row-hosting.de/BBT/Gifs/management.gif">
         </section>
 
-        <h1 class="text-center display-1">Lernen Sie unser Verwaltungs-Team kennen</h1>
-        <br><br>
+    <h1 class="text-center display-1">Lernen Sie unser Verwaltungsteam kennen</h1>
 
-        <div class="flow">
-            <h3 class="text-center" >Unser Verwaltungsteam - engagiert,
-                kompetent und immer auf dem neuesten Stand.</h3>
+    <div class="flow">
+      <h3 class="text-center">Unser Managementteam <br> Ihr strategischer Partner für erfolgreiche Unternehmensführung <br> und nachhaltiges Wachstum.</h3>
 
-            <div class="team">
-                <?php echo $profilesList; ?>
-
-            </div>
-        </div>
-        <h2 class="text-center"><q>Vereinfachen Sie Ihre Verwaltung mit uns.</q></h2>
-        <p class="text-center lead">Effiziente Verwaltung auf höchstem Niveau - <br> mit uns haben Sie den perfekten
-            Partner. </p><br><br>
+      <div class="team">
+        <?php echo $profilesList; ?>
+      </div>
     </div>
+    <h2 class="text-center"><q>Vereinfachen Sie Ihre Verwaltung mit uns.</q></h2>
+    <p class="text-center lead">Effiziente Verwaltung auf höchsten Niveau <br> mit uns haben Sie den perfekten Partner</p>
+  </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>

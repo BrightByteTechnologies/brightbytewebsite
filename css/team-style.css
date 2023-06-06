@@ -1,5 +1,6 @@
 .main {
   background-color: var(--logocolor);
+  padding-top: 2.5%;
 }
 
 .row {
@@ -48,7 +49,7 @@ h2 {
   font-size: 36px;
   font-weight: bold;
   color: #FFFFFF;
-  text-shadow: 0 0 5px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
+  text-shadow: 0 0 2px #FFF, 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light), 0 0 12px var(--logocolor-light), 0 0 14px var(--logocolor-light), 0 0 16px var(--logocolor-light);
 }
 
 .image {
@@ -104,7 +105,7 @@ img {
 
 h3 {
   font-size: 505%;
-  font-family: brush script mt, cursive;
+  font-family: brush script mt, cursive !important;
   border: 1px solid;
   position: relative;
   right: 16%;

@@ -19,6 +19,7 @@ $profilesList = createList($responseData);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BrightByte Technologies - Hardware-Team</title>
+    <?php include 'includes/functions/misc/fonts.html'; ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -39,11 +40,10 @@ $profilesList = createList($responseData);
             <img class="d-block" src="https://cdn.row-hosting.de/BBT/Gifs/hardware.gif">
         </section>
 
-        <h1 class="text-center display-1">Lernen Sie unser Hardware-Team kennen</h1>
+        <h1 class="text-center display-1">Lernen Sie unser Hardwareteam kennen</h1>
 
         <div class="flow">
-            <h3 class="text-center">Unser Hardwareteam - Ihr Partner
-                für Technologie und Entwicklung.</h3>
+            <h3 class="text-center">Unser Hardwareteam <br> Ihr Partner für technologische Exzellenz und Fortschritt. <br> Gemeinsam zu innovativen Lösungen.</h3>
 
             <div class="team">
                     <?php echo $profilesList; ?>

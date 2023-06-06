@@ -18,14 +18,15 @@ body {
 }
 
 #company-name {
-    font-size: 30px;
+    font-size: 26px;
     white-space: nowrap;
     text-decoration: none;
-    text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.2em var(--logocolor-light);
+    text-shadow: 0 0 8px var(--logocolor-light), 0 0 6px var(--logocolor-light);
     color: #fff;
     width: 300px;
     top: -10px;
     position: relative;
+    font-family: 'Bruno Ace', cursive !important;
 }
 
 #brand-container {
@@ -79,7 +80,7 @@ body {
 
 #nav-down li {
     list-style: none;
-    margin-right: 30px;
+    margin-right: 15px;
 }
 
 #nav-down li:last-child {
