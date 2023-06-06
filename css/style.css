@@ -5,7 +5,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 20px;
     color: #FFFFFF;
-    text-shadow: 0 0 2px #FFF, 0 0 4px var(--logocolor-light), 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light), 0 0 9px var(--logocolor-light), 0 0 10px var(--logocolor-light);
+    text-shadow: 0 0 1px #FFF, 0 0 2px var(--logocolor-light), 0 0 3px var(--logocolor-light), 0 0 4px var(--logocolor-light), 0 0 4px var(--logocolor-light), 0 0 5px var(--logocolor-light);
 }
 
 b {
