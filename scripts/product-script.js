@@ -19,8 +19,6 @@ fetch('includes/product-info.json')
       benefitDiv.appendChild(nameSpan);
       benefitDiv.appendChild(descSpan);
     }
-
-
   })
   .catch(error => {
     // Verbindung fehlgeschlagen

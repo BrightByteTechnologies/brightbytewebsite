@@ -97,6 +97,11 @@ button:hover {
     padding-bottom: 5%;
 }
 
+#bevDesc, #bevWhy, .des-detail {
+    font-family: 'Handlee', cursive !important;
+    font-size: larger;
+}
+
 .des-name {
     border-bottom: var(--logocolor) 1px dashed;
     font-weight: bold;
