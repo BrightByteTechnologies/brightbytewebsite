@@ -95,11 +95,11 @@ function showCurrentSlide(index) {
     shownCollection[currentSlideIndex].style.display = "block";
   } else {
     for (let i = 0; i < getSlideSize(); i++) {
-      var currentSlide = shownCollection[currentSlideIndex + i];
-      if (currentSlide !== null) {
+      var currentSlideIndexWithOffset = (currentSlideIndex + i) % shownCollection.length;
+      var currentSlide = shownCollection[currentSlideIndexWithOffset];
+      if (currentSlide) {
         currentSlide.style.display = "block";
       }
-
     }
   }
 }
