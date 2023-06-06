@@ -27,6 +27,11 @@ p {
     border-radius: 1.5rem;
 }
 
+.carousel-item {
+    width: 720px;
+    height: 650px;
+}
+
 .bi-sun {
     color: white;
 }
