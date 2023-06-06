@@ -270,20 +270,16 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     padding-top: 5%;
     padding-bottom: 3%;
     overflow: hidden;
 }
 
 .timeline {
-    position: absolute;
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 100%;
-    min-height: 500px;
-    max-height: 500px;
+    max-width: 500px;
+    height: 600px;
     margin-left: .5%;
     margin-right: .5%;
 }
@@ -324,18 +320,13 @@ button:hover {
 }
 
 .tl-bg {
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    min-height: 500px;
-    max-height: 550px;
+    width: 410px;
+    height: 720px;
     background-color: #234c5c;
     position: absolute;
-    transition: all .4s;
+    transition: all 0.4s;
     z-index: 0;
-    filter: grayscale(0%);
-    border-radius: .5rem;
-    object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 .tl-img-panel {
