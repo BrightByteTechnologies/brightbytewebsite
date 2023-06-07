@@ -48,6 +48,7 @@ body {
   text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.2em var(--logocolor-light);
   border: 2px var(--logocolor-dark) solid;
   background: url(https://cdn.row-hosting.de/BBT/Website/basket.png) no-repeat center;
+  background-color: var(--logocolor-dark);
   background-size: 60%;
   height: 100%;
   width: 100%;
@@ -148,12 +149,14 @@ body {
   font-size: xx-large;
   font-weight: bold;
 }
-.reset input{
+
+.reset input {
   width: 100% !important;
   margin-top: 2% !important;
 }
 
-#pay-button:hover, #resetCancel:hover {
+#pay-button:hover,
+#resetCancel:hover {
   background-color: darkgreen;
 }
 
@@ -219,7 +222,7 @@ body {
   z-index: 999;
 }
 
-#itemAmount{
+#itemAmount {
   width: 60%;
   height: 75%;
   font-size: xx-large;
@@ -456,10 +459,10 @@ body {
   }
 
   #pay-button,
-#reset-button,
-.amountSele input[type="submit"],
-.reset input[type="submit"] {
-  width: 120px;
-  margin-bottom: 1.5%;
-}
+  #reset-button,
+  .amountSele input[type="submit"],
+  .reset input[type="submit"] {
+    width: 120px;
+    margin-bottom: 1.5%;
+  }
 }

@@ -10,14 +10,14 @@ body {
 
 h1 {
     color: aliceblue;
-    text-shadow: 0 0 5px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
+    text-shadow: 0 0 1px #FFF, 0 0 3px var(--logocolor-light), 0 0 4px var(--logocolor-light), 0 0 5px var(--logocolor-light), 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light);
     letter-spacing: 1px;
     font-style: oblique;
 }
 
 h2 {
     color: aliceblue;
-    text-shadow: 0 0 4px #FFF, 0 0 20px var(--logocolor-light), 0 0 30px var(--logocolor-light), 0 0 40px var(--logocolor-light), 0 0 55px var(--logocolor-light), 0 0 75px var(--logocolor-light);
+    text-shadow: 0 0 1px #FFF, 0 0 1px var(--logocolor-light), 0 0 2px var(--logocolor-light), 0 0 3px var(--logocolor-light), 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light);
     font-style: oblique;
 }
 
@@ -97,9 +97,15 @@ button:hover {
     padding-bottom: 5%;
 }
 
+#bevDesc, #bevWhy, .des-detail {
+    font-family: 'Handlee', cursive !important;
+    font-size: larger;
+}
+
 .des-name {
     border-bottom: var(--logocolor) 1px dashed;
     font-weight: bold;
+    text-shadow: -2px -2px 0 #435B6B,-2px -1px 0 #435B6B,-2px 0px 0 #435B6B,-2px 1px 0 #435B6B,-2px 2px 0 #435B6B,-1px -2px 0 #435B6B,-1px -1px 0 #435B6B,-1px 0px 0 #435B6B,-1px 1px 0 #435B6B,-1px 2px 0 #435B6B,0px -2px 0 #435B6B,0px -1px 0 #435B6B,0px 0px 0 #435B6B,0px 1px 0 #435B6B,0px 2px 0 #435B6B,1px -2px 0 #435B6B,1px -1px 0 #435B6B,1px 0px 0 #435B6B,1px 1px 0 #435B6B,1px 2px 0 #435B6B,2px -2px 0 #435B6B,2px -1px 0 #435B6B,2px 0px 0 #435B6B,2px 1px 0 #435B6B,2px 2px 0 #435B6B;
 }
 
 .lb {
@@ -113,13 +119,13 @@ button:hover {
 }
 
 #name {
-    font-size: 64px;
+    font-size: 90px;
     float: right;
     margin-bottom: 0;
 }
 
 #p1 {
-    font-size: 40px;
+    font-size: 50px;
     margin: 0;
     float: right;
     font-style: oblique;
@@ -130,7 +136,7 @@ button:hover {
 }
 
 #mini {
-    font-size: small;
+    font-size: 16px;
     color: var(--logocolor-light);
     text-shadow: 6px 6px 7px black;
     margin: 0;
@@ -140,12 +146,9 @@ button:hover {
 }
 
 #bbpic {
-    width: max-content;
-    max-width: 400px;
-    height: max-content;
-    max-height: 400px;
-    margin-left: 1%;
-    padding: auto;
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
 }
 
 * {
@@ -252,12 +255,14 @@ button:hover {
     hyphens: auto;
 }
 
+.timeline-container {
+    margin-bottom: 2%;
+}
+
 .timeline-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     padding-top: 5%;
     padding-bottom: 3%;
     overflow: hidden;
@@ -265,12 +270,9 @@ button:hover {
 
 .timeline {
     position: relative;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    min-height: 500px;
-    max-height: 500px;
-
+    justify-content: center;
+    width: 410px;
+    height: 600px;
     margin-left: .5%;
     margin-right: .5%;
 }
@@ -288,21 +290,21 @@ button:hover {
 /*hovering div move whole content*/
 .timeline:hover .tl-img-panel,
 .timeline:hover .tl-title {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .timeline:hover .tl-img-panel {
-  transform: translate(30%, 25%);
+    transform: translate(30%, 25%);
 }
 
 .timeline:hover .tl-title {
-  transform: translate(0%, 287%);
+    transform: translate(0%, 287%);
 }
 
 .timeline:not(:hover) .tl-img-panel,
 .timeline:not(:hover) .tl-title {
-  transform: translate(0, 0);
-  transition: transform 0.3s ease;
+    transform: translate(0, 0);
+    transition: transform 0.3s ease;
 }
 
 
@@ -311,17 +313,13 @@ button:hover {
 }
 
 .tl-bg {
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    min-height: 500px;
-    max-height: 550px;
+    width: 410px;
+    height: 720px;
     background-color: #234c5c;
     position: absolute;
-    transition: all .4s;
+    transition: all 0.4s;
     z-index: 0;
-    filter: grayscale(0%);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .tl-img-panel {
@@ -352,7 +350,7 @@ button:hover {
     top: -135px;
 }
 
-.tl-title h2{
+.tl-title h2 {
     color: #234c5c;
 }
 
@@ -439,13 +437,18 @@ button:hover {
         overflow-x: hidden;
     }
 
+    .bb-why h1 {
+        text-align: left;
+    }
+
     .bb-sell {
-        padding-top: 0px;
+        padding-top: 2%;
         display: inline-block;
         margin-left: 0;
         margin-right: 0;
         align-items: center;
         width: 100%;
+        height: auto;
     }
 
     .bevbotleft {
@@ -457,17 +460,23 @@ button:hover {
     }
 
     .bevbotright {
-        position: relative;
         padding: 0;
         margin: auto;
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lb {
+        width: auto;
+        height: auto;
     }
 
     #bbpic {
-        width: 100%;
-        height: 100%;
-        max-width: 300px;
-        max-height: 300px;
+        width: 475px;
+        height: 475px;
+        object-fit: cover;
     }
 
     .bb-des {
@@ -485,12 +494,13 @@ button:hover {
         max-height: 450px;
     }
 
-    .tl-img-panel, .tl-title {
+    .tl-img-panel,
+    .tl-title {
         left: 20px;
     }
 
     .timeline-box {
-        padding-bottom: 25%;
+        padding-bottom: 10%;
     }
 
     .timeline:hover .tl-text {

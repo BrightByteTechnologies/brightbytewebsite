@@ -47,6 +47,7 @@ foreach ($responseData as $timeline) {
     </style>
     <script type="text/javascript" src="./scripts/product-script.js" defer></script>
     <title>BrightByte Technologies - Produkt</title>
+    <?php include 'includes/functions/misc/fonts.html'; ?>
 	<link rel="shortcut Icon" href="https://cdn.row-hosting.de/BBT/Website/bb-logo.png">
 </head>
 

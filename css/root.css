@@ -5,3 +5,11 @@
 
     --border-radius: .5rem;
 }
+
+* {
+    font-family: 'Bree Serif', serif !important;
+}
+
+h1 {
+    font-family: 'Carter One', cursive !important;
+}

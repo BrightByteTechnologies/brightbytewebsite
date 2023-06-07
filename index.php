@@ -13,6 +13,7 @@ $currentFile = 'index.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <!-- Bootstrap CSS -->
+    <?php include 'includes/functions/misc/fonts.html'; ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -55,7 +56,7 @@ $currentFile = 'index.php';
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                            <img src="https://cdn.row-hosting.de/BBT/Teams/group.jpg"
                                                 class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">

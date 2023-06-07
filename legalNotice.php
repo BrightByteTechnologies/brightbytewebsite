@@ -11,6 +11,7 @@ $currentFile = 'legalNotice.php';
             body {background-color: var(--logocolor);}
             h1, h2, p{color: #fff;}
         </style>
+        <?php include 'includes/functions/misc/fonts.html'; ?>
     </head>
     <body>
     <?php include('includes/navbar/navbar.php') ?>
