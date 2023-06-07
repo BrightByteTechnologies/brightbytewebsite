@@ -100,18 +100,19 @@ $currentFile = 'team.php';
 	</div>
 	<div class="row">
 	<div class="col-sm-12">
-  	<h2>Ehrenvoll Anerkennung</h2>
+  	<h2>Anerkennung</h2>
 	</div>
 	<div class="image">
         <img src="https://cdn.row-hosting.de/BBT/Teams/Ole.jpg">
       </div>
 	  <div class="col-sm-12">
       <div class="text2">
-		<p>Ole Sakowski</p>
-		<p>Business Partner</p>
-		<br><br><br><br>
-        <h3>Danke für Ihren Beitrag</h3>
-		<p class="para">Wir erkennen und schätzen alles, was Sie für das Unternehmen leisten.</p>
+		
+		<p>Business Partner:<br>
+		Ole Sakowski
+		<br><br>
+        Danke für Ihren Beitrag<br><br>
+		Wir schätzen alles, was Sie für das Unternehmen leisten.</p>
       </div>
 </div>
 </div>
