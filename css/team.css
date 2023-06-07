@@ -232,7 +232,7 @@ a.profile {
 
 .profile p {
   opacity: 0;
-  top: 3em;
+  top: 1em;
   transition: 300ms opacity linear, 300ms transform ease-in-out;
 }
 
@@ -291,9 +291,5 @@ a.profile {
   .d-block {
     width: 380px;
     height: 300px;
-  }
-
-  .profile p {
-    top: 1em;
   }
 }
