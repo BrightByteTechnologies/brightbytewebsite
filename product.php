@@ -9,6 +9,15 @@ $keyIndex = 0;
 
 $responseData = makeRequest($endpoint, $method, $keyIndex);
 
+// Define a custom comparison function to compare the 'date' values
+function compareDates($a, $b) {
+    $dateA = strtotime($a['date']);
+    $dateB = strtotime($b['date']);
+    return $dateA - $dateB;
+}
+
+usort($responseData, 'compareDates');
+
 $timelineList = "";
 foreach ($responseData as $timeline) {
     $id = $timeline['id'];
@@ -16,21 +25,21 @@ foreach ($responseData as $timeline) {
     $desc = $timeline['description'];
     $url = $timeline['url'];
 
-    $timestamp = strtotime($date); // convert date string to a Unix timestamp
-    $formattedDate = date('d.m.Y', $timestamp); // format the timestamp into dd.mm.yyyy format
+    $timestamp = strtotime($date);
+    $formattedDate = date('d.m.Y', $timestamp);
 
     $timelineList .= "<div class='timeline sliding'>";
-    $timelineList .= "<img class='tl-bg' src=' $url ' alt='Background'>";
+    $timelineList .= "<img class='tl-bg' src='$url' alt='Background'>";
     $timelineList .= "<div class='tl-content'>";
     $timelineList .= "<div class='tl-img-panel'>";
     $timelineList .= "<img class='tl-img' src='https://cdn.row-hosting.de/BBT/Website/bb-logo.png' alt='Icon'>";
     $timelineList .= "</div>";
     $timelineList .= "<div class='tl-title'>";
-    $timelineList .= "<h2> $formattedDate </h2>";
+    $timelineList .= "<h2>$formattedDate</h2>";
     $timelineList .= "</div>";
     $timelineList .= "<div class='tl-text'>";
-    $timelineList .= "<p class='tl-p'> $desc </p>";
-    $timelineList .= " </div></div></div>";
+    $timelineList .= "<p class='tl-p'>$desc</p>";
+    $timelineList .= "</div></div></div>";
 }
 
 ?>
