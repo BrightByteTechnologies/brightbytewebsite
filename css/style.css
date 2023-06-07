@@ -62,3 +62,10 @@ body {
     background-color: var(--logocolor);
     text-shadow: 0 0 1em var(--logocolor-light), 0 0 0.3em var(--logocolor-light);
 }
+
+@media (max-width: 800px) {
+    .carousel-item {
+        height: 350px;
+    }
+    
+}

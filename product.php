@@ -58,13 +58,10 @@ foreach ($responseData as $timeline) {
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class='mySlides fade'>
-                    <img src='https://cdn.row-hosting.de/BBT/placeholder.png' alt='BevBot' id='bbpic'>
+                    <img src='https://cdn.row-hosting.de/BBT/Website/bevbot_front.jpg' alt='BevBot' id='bbpic'>
                 </div>
                 <div class='mySlides fade'>
-                    <img src='https://cdn.row-hosting.de/BBT/placeholder.png' alt='BevBot' id='bbpic'>
-                </div>
-                <div class='mySlides fade'>
-                    <img src='https://cdn.row-hosting.de/BBT/placeholder.png' alt='BevBot' id='bbpic'>
+                    <img src='https://cdn.row-hosting.de/BBT/Website/bevbot_back.jpg' alt='BevBot' id='bbpic'>
                 </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>

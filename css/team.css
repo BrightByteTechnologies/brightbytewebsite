@@ -265,19 +265,11 @@ a.profile {
   transform: scale(1.05) rotate(1deg);
 }
 
-@media only screen and (max-width: 1220px) {
-  h1 {
-    top: -210px;
-    width: 975px;
-    height: 190px;
-  }
-}
-
-/* Small screens */
 @media only screen and (max-width: 800px) {
 
   h1 {
-    top: -35px;
+    font-size: 36px !important;
+    top: -170px;
     width: 331px;
     height: 190px;
   }
@@ -295,67 +287,13 @@ a.profile {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
-}
 
-/* Medium screens */
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-
-  h1 {
-    top: -35px;
-    width: 331px;
-    height: 190px;
+  .d-block {
+    width: 380px;
+    height: 300px;
   }
 
-  /* Styles for medium screens */
-  div.main {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  h1 {
-    top: -35px;
-    width: 331px;
-    height: 190px;
-  }
-
-  body {
-    font-size: 10px;
-  }
-}
-
-/* adjust font size for even smaller screens */
-@media screen and (max-width: 480px) {
-
-  h1 {
-    top: -35px;
-    width: 330px;
-    height: 190px;
-    border-radius: 1.5rem;
-    font-size: 47px !important;
-  }
-
-  body {
-    font-size: 8px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-
-  h1 {
-    top: -26px;
-    width: 298px;
-    height: 172px;
-    font-size: 37px !important;
-  }
-
-  body {
-    font-size: 8px;
-  }
-
-  .auto-grid li{
-    margin-right: 1.5% !important;
-    margin-left: 1.5% !important;
+  .profile p {
+    top: 1em;
   }
 }

@@ -49,7 +49,7 @@ h2 {
   font-size: 36px;
   font-weight: bold;
   color: #FFFFFF;
-  text-shadow: 0 0 2px #FFF, 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light), 0 0 12px var(--logocolor-light), 0 0 14px var(--logocolor-light), 0 0 16px var(--logocolor-light);
+  text-shadow: 0 0 2px #FFF, 0 0 2px var(--logocolor-light), 0 0 3px var(--logocolor-light), 0 0 4px var(--logocolor-light), 0 0 6px var(--logocolor-light), 0 0 8px var(--logocolor-light);
 }
 
 .image {
@@ -83,7 +83,7 @@ img {
 .text2 {
   padding-left: 49%;
   position: relative;
-  bottom: 165% !important;
+  bottom: 160% !important;
   opacity: 0.7;
 }
 
@@ -115,13 +115,40 @@ background-color: #2f404c;
   
 }
 
-h3 {
-  font-size: 505%;
+.partners {
+  font-size: 80px;
+  font-family: 'Lilita One', cursive !important;
+  border: 1px solid;
+  position: relative;
+  background: rgb(48, 60, 85);
+  color: lavender;
+  text-shadow: 4px 4px 0px #90A7B7;
+}
+
+.partner-name {
+  font-size: 70px;
   font-family: brush script mt, cursive !important;
   border: 1px solid;
   position: relative;
-  background: rgb(44, 58, 69);
+  background: rgb(48, 60, 85);
   color: lavender;
+  text-shadow: -4px 1px 0px #90A7B7;
+}
+
+#partner-thanks {
+  font-size: 45px;
+  font-family: 'Lobster', cursive !important;
+  text-shadow: -4px 1px 0px #90A7B7;
+}
+
+.partner-text {
+  font-size: 35px;
+  font-family: 'Handlee', cursive !important;
+  border: 1px solid;
+  position: relative;
+  background: rgb(48, 60, 85);
+  color: lavender;
+  text-shadow: -3px 1px 0px #90A7B7;
 }
 
 .content {
@@ -181,39 +208,30 @@ h4 {
     margin-top: 10px;
     height: 90% !important;
   }
-}
 
-@media (max-width: 575.98px) {
-  img {
-    width: 100% !important;
+  .partners {
+    margin-top: -90%;
+    margin-left: 5%;
+    font-size: 30px;
+    text-shadow: 2px 2px 0px #90A7B7;
+  }
+  
+  .partner-name {
+    font-size: 25px;
+    margin-left: 5%;
+    text-shadow: -2px 1px 0px #90A7B7;
+  }
+  
+  #partner-thanks {
+    font-size: 20px;
+    margin-left: 5%;
+    text-shadow: -2px 1px 0px #90A7B7;
+  }
+  
+  .partner-text {
+    font-size: 15px;
+    margin-left: 5%;
+    text-shadow: -1.5px 1px 0px #90A7B7;
   }
 
-  .text {
-    font-size: 2rem;
-  }
-}
-
-.text2>div {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-@media (max-width: 575.98px) {
-  img {
-    width: 100% !important;
-  }
-
-  .text2 {
-    font-size: 0.2rem;
-    margin-left: 10px;
-    position: relative;
-    bottom: 250%
-  }
-  .image{
-    height: 90%;
-  }
-
-  .text2 p {
-    font-size: 0.6rem;
-  }
 }

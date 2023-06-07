@@ -109,11 +109,9 @@ $currentFile = 'team.php';
 	  <div class="col-sm-12">
       <div class="text2">
 		
-		<p>Business Partner:<br>
-		Ole Sakowski
-		<br><br>
-        Danke für Ihren Beitrag<br><br>
-		Wir schätzen alles, was Sie für das Unternehmen leisten.</p>
+		<h3 class="partners">Business Partner:<br></h3><h3 class="partner-name"> Ole Sakowski</h3>
+        <h4 class="partner-text" id="partner-thanks">Vielen Dank für Ihren Beitrag</h4><br>
+		<h4 class="partner-text" >Wir schätzen alles, was Sie für das Unternehmen leisten.</h4></>
       </div>
 </div>
 </div>
