@@ -87,28 +87,9 @@ img {
   opacity: 0.7;
 }
 
-.text2 p, h3 {
-  border-radius: .5rem;
-}
 
-.text2 p{
-background-color: #2f404c;
-  color: black;
-  font-size: 10vw;
-  font-weight: bold;
-  margin: 0 auto;
-    margin-top: 0px;
-  padding: 10px;
-  width: 54%;
-  text-align: center;
-  position: absolute;
-  margin-top: -44%;
-  left: 74%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
-  font-size: 50px;
-  
-}
+
+
 
 .para {
   position: relative;
@@ -116,38 +97,53 @@ background-color: #2f404c;
 }
 
 .partners {
-  font-size: 80px;
-  font-family: 'Lilita One', cursive !important;
-  border: 1px solid;
-  position: relative;
-  background: rgb(48, 60, 85);
-  color: lavender;
-  text-shadow: 4px 4px 0px #90A7B7;
+  z-index: 35;
+font-family: "Poppins";
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: 15px;
+  font-weight: 600;
+  font-size: 59px;
+  padding-left: 15px;
+  filter: none;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform-origin: 50% 50% 0px;
+  opacity: 1;
+  transform: translate(0px);
+  visibility: visible;
 }
 
 .partner-name {
-  font-size: 70px;
-  font-family: brush script mt, cursive !important;
-  border: 1px solid;
+  font-size: 26px;
+  font-family: "Poppins";
   position: relative;
-  background: rgb(48, 60, 85);
-  color: lavender;
+  color: black;
   text-shadow: -4px 1px 0px #90A7B7;
 }
 
+
 #partner-thanks {
-  font-size: 45px;
-  font-family: 'Lobster', cursive !important;
+  font-size: 39px;
   text-shadow: -4px 1px 0px #90A7B7;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .partner-text {
   font-size: 35px;
-  font-family: 'Handlee', cursive !important;
+  font-family: "Poppins";
   border: 1px solid;
   position: relative;
-  background: rgb(48, 60, 85);
-  color: lavender;
+  color: black;
+  
 }
 
 .content {
