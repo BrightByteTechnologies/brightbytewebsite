@@ -31,7 +31,12 @@ p {
 }
 
 .carousel-item {
-    height: 720px;
+    height: 800px;
+    background-color: var(--logocolor-dark);
+}
+
+.carousel-item img {
+    object-fit: scale-down;
 }
 
 .bi-sun {
