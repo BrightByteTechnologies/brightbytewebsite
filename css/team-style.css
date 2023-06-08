@@ -97,34 +97,18 @@ img {
 }
 
 .partners {
-  z-index: 35;
-font-family: "Poppins";
-  height: auto;
-  width: auto;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  white-space: nowrap;
-  min-height: 0px;
-  min-width: 0px;
-  max-height: none;
-  max-width: none;
-  text-align: center;
-  line-height: 80px;
-  letter-spacing: 15px;
-  font-weight: 600;
-  font-size: 59px;
-  padding-left: 15px;
-  filter: none;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  transform-origin: 50% 50% 0px;
-  opacity: 1;
-  transform: translate(0px);
-  visibility: visible;
+  font-size: 80px;
+  font-family: 'Lilita One', cursive !important;
+  border: 1px solid;
+  position: relative;
+  background: rgb(48, 60, 85);
+  color: lavender;
+  text-shadow: 4px 4px 0px #90A7B7;
 }
 
 .partner-name {
-  font-size: 26px;
-  font-family: "Poppins";
+  font-size: 44px;
+  font-family: "Poppins" !important;
   position: relative;
   color: black;
   text-shadow: -4px 1px 0px #90A7B7;
@@ -139,7 +123,7 @@ font-family: "Poppins";
 
 .partner-text {
   font-size: 35px;
-  font-family: "Poppins";
+  font-family: "Poppins" !important;
   border: 1px solid;
   position: relative;
   color: black;
@@ -205,7 +189,8 @@ h4 {
   }
 
   .partners {
-    margin-top: -90%;
+    overflow: hidden;
+    margin-top: -48%;
     margin-left: 5%;
     font-size: 30px;
     text-shadow: 2px 2px 0px #90A7B7;
