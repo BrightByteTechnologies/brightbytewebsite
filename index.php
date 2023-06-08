@@ -60,11 +60,11 @@ $currentFile = 'index.php';
                                                 class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                            <img src="https://cdn.row-hosting.de/BBT/Website/bevbot_front.jpg"
                                                 class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="https://cdn.row-hosting.de/BBT/placeholder.png"
+                                            <img src="https://cdn.row-hosting.de/BBT/Website/bevbot_back.jpg"
                                                 class="d-block w-100 h-100 rounded" alt="...">
                                         </div>
                                     </div>
